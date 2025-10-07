@@ -902,6 +902,13 @@ section
     bottom: 2.1rem;
     right: 2, 1rem;
 }
+.about-text {
+    text-align: justify;
+    line-height: 1.8;        /* makes it more readable */
+    font-size: 16px;         /* optional – adjust to your design */
+    color: #ddd;             /* optional – text color for dark backgrounds */
+}
+
 .top i
 {
     color: #000;
@@ -909,4 +916,5 @@ section
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
+
 }
