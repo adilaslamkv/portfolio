@@ -85,7 +85,7 @@ body {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #081b29;
     background-size: cover;
     background-position: center;
@@ -919,4 +919,5 @@ section
     border-radius: 0.5rem;
 
 }
+
 
