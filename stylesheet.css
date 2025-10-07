@@ -92,6 +92,7 @@ body {
     display: flex;
     align-items: center;
     padding: 70px 10%;
+    margin-top: 100px;
 }
 
 .home-content {
@@ -918,3 +919,4 @@ section
     border-radius: 0.5rem;
 
 }
+
