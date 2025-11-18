@@ -24,3 +24,25 @@ menuBtn.addEventListener("click", () => {
         mobileMenu.style.display = "flex";
     }
 });
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 80
+    });
+</script>
+// ================= THEME TOGGLE =================
+const themeBtn = document.getElementById("theme-toggle");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    // Change icon
+    if (document.body.classList.contains("light-mode")) {
+        themeBtn.textContent = "🌞";
+    } else {
+        themeBtn.textContent = "🌙";
+    }
+});
+
