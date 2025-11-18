@@ -1077,6 +1077,53 @@ section
         right: 1rem;
     }
 }
+/* ================= MOBILE NAVBAR ================= */
+
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    color: #0ef;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    right: 10%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0ef;
+    z-index: 200;
+}
+
+.mobile-menu a {
+    color: #0ef;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.mobile-menu a:hover {
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
 
 
 
