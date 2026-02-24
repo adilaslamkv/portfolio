@@ -1,457 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- <meta name="description" content="Portfolio of Adil Aslam KV - Web Developer, Flutter Developer, Full Stack Developer. View skills, projects, services, and contact details.">
-<meta name="keywords" content="Flutter Developer, Web Developer, Full Stack Developer, Portfolio, Adil Aslam KV, Mobile App Developer">
-<meta name="author" content="Adil Aslam KV">
-<meta property="og:title" content="Adil Aslam KV - Portfolio">
-<meta property="og:description" content="Flutter & Web Developer | Full Stack Developer | ML Integrations">
-<meta property="og:type" content="website">
-<meta property="og:image" content="image/adilkv.jpg">
-<meta name="robots" content="index,follow"> -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADIL ASLAM K V</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- AOS Animation Library -->
-<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Adil Aslam K V | Flutter & Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<style>
+:root{--bg:#050810;--bg2:#080d1a;--surface:rgba(255,255,255,.04);--surface2:rgba(255,255,255,.07);--border:rgba(255,255,255,.08);--accent:#00d4ff;--accent2:#7c3aed;--accent3:#10b981;--text:#e8eaf6;--muted:#6b7280;--heading:#fff;--cr:20px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(0,212,255,.3);border-radius:2px}
+#pCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+.o1{width:650px;height:650px;background:var(--accent2);top:-200px;left:-200px;opacity:.13;animation:d1 22s ease-in-out infinite alternate}
+.o2{width:550px;height:550px;background:var(--accent);bottom:-180px;right:-180px;opacity:.11;animation:d2 27s ease-in-out infinite alternate}
+.o3{width:420px;height:420px;background:var(--accent3);top:40%;left:55%;opacity:.06;animation:d3 35s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(90px,70px) scale(1.25)}}
+@keyframes d2{to{transform:translate(-70px,-90px) scale(1.2)}}
+@keyframes d3{to{transform:translate(60px,-60px) scale(1.4)}}
+.cDot{width:8px;height:8px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .18s,height .18s,background .18s}
+.cRing{width:38px;height:38px;border:1.5px solid rgba(0,212,255,.5);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .28s,height .28s,border-color .28s,background .28s}
+.cDot.ck{width:5px;height:5px;background:#fff}.cRing.ck{width:18px;height:18px;background:rgba(0,212,255,.1)}
+.cDot.hv{width:14px;height:14px}.cRing.hv{width:58px;height:58px;border-color:rgba(0,212,255,.85);background:rgba(0,212,255,.04)}
+.cDot.tx{width:3px;height:22px;border-radius:2px;background:var(--accent)}
+@media(hover:none){.cDot,.cRing{display:none}body{cursor:auto}}
+#pb{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent),var(--accent3));z-index:9998;width:0%;transition:width .08s;border-radius:0 2px 2px 0}
+.toast{position:fixed;bottom:28px;right:28px;z-index:5000;padding:14px 20px;border-radius:12px;font-size:.86rem;font-weight:500;display:flex;align-items:center;gap:10px;transform:translateY(80px);opacity:0;transition:all .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;max-width:320px;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.ok{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.35);color:#10b981}
+.toast.err{background:rgba(255,80,80,.15);border:1px solid rgba(255,80,80,.35);color:#ff5050}
+.toast.inf{background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.3);color:var(--accent)}
+nav{position:fixed;top:0;width:100%;z-index:200;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(22px);background:rgba(5,8,16,.68);border-bottom:1px solid var(--border);transition:padding .3s,background .3s}
+nav.sc{padding:12px 60px;background:rgba(5,8,16,.94)}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--heading);text-decoration:none;letter-spacing:-.5px}
+.logo span{color:var(--accent)}.logo::after{display:none}
+.navl{display:flex;gap:32px;list-style:none}
+.navl a{color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:4px}
+.navl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
+.navl a:hover,.navl a.act{color:#fff}.navl a:hover::after,.navl a.act::after{width:100%}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:none;z-index:201}
+.hbg span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .32s;display:block}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hbg.op span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mmenu{display:none;position:fixed;inset:0;background:rgba(5,8,16,.98);backdrop-filter:blur(28px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.mmenu.op{display:flex}
+.mmenu a{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:800;color:var(--heading);text-decoration:none;opacity:0;transform:translateY(24px);transition:color .2s}
+.mmenu.op a{animation:su .4s forwards}.mmenu a:hover{color:var(--accent)}
+.mmenu.op a:nth-child(1){animation-delay:.04s}.mmenu.op a:nth-child(2){animation-delay:.09s}.mmenu.op a:nth-child(3){animation-delay:.13s}.mmenu.op a:nth-child(4){animation-delay:.17s}.mmenu.op a:nth-child(5){animation-delay:.21s}.mmenu.op a:nth-child(6){animation-delay:.25s}.mmenu.op a:nth-child(7){animation-delay:.29s}
+@keyframes su{to{opacity:1;transform:translateY(0)}}
+section{position:relative;z-index:1}
+.sw{max-width:1200px;margin:0 auto;padding:100px 60px}
+.sl{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.sl::before{content:'';width:28px;height:1px;background:var(--accent)}
+.st{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--heading);line-height:1.08;letter-spacing:-1.2px;margin-bottom:14px}
+.sd{color:var(--muted);font-size:1rem;line-height:1.8;max-width:560px;margin-bottom:56px}
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 60px}
+.btp{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;background:var(--accent);color:#000;font-weight:600;font-size:.85rem;border-radius:10px;text-decoration:none;letter-spacing:.03em;border:1.5px solid var(--accent);transition:background .3s,color .3s,box-shadow .3s;position:relative;overflow:hidden;cursor:none;font-family:'DM Sans',sans-serif}
+.btp::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.22);transform:translateX(-108%);transition:transform .4s cubic-bezier(.25,1,.5,1)}
+.btp:hover::after{transform:translateX(0)}.btp:hover{background:transparent;color:var(--accent);box-shadow:0 8px 34px rgba(0,212,255,.32)}
+.bto{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;background:transparent;color:var(--text);font-weight:500;font-size:.85rem;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);transition:all .3s;position:relative;overflow:hidden;cursor:none;font-family:'DM Sans',sans-serif}
+.bto::after{content:'';position:absolute;inset:0;background:rgba(0,212,255,.06);transform:translateX(-108%);transition:transform .4s cubic-bezier(.25,1,.5,1)}
+.bto:hover::after{transform:translateX(0)}.bto:hover{border-color:var(--accent);color:var(--accent)}
+.rpl{position:absolute;border-radius:50%;background:rgba(255,255,255,.26);transform:scale(0);animation:rp .58s linear;pointer-events:none}
+@keyframes rp{to{transform:scale(4.5);opacity:0}}
+#home{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px}
+.hi{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:70px;align-items:center}
+.hb{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:100px;padding:6px 16px;font-size:.74rem;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:26px;animation:fd .6s .15s both}
+.bd{width:7px;height:7px;background:var(--accent3);border-radius:50%;animation:pl 2s infinite}
+@keyframes pl{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.4)}50%{box-shadow:0 0 0 7px rgba(16,185,129,0)}}
+.ht{font-family:'Syne',sans-serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;line-height:.98;color:var(--heading);letter-spacing:-2.5px;margin-bottom:18px;animation:fu .7s .25s both}
+.gt{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:gs 5s infinite}
+@keyframes gs{0%,100%{background-position:0%}50%{background-position:100%}}
+.tw{font-family:'Syne',sans-serif;font-size:clamp(1.15rem,2.5vw,1.75rem);font-weight:700;color:var(--muted);margin-bottom:28px;min-height:2.4rem;animation:fu .7s .35s both}
+.tc{color:var(--accent);animation:bl 1s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:0}}
+.hd{color:var(--muted);font-size:1rem;line-height:1.85;max-width:520px;margin-bottom:42px;animation:fu .7s .45s both}
+.hca{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:58px;animation:fu .7s .55s both}
+.hs{display:flex;gap:42px;animation:fu .7s .65s both}
+.stat{display:flex;flex-direction:column;gap:4px}
+.sn{font-family:'Syne',sans-serif;font-size:2.1rem;font-weight:800;color:var(--heading);line-height:1;display:flex;align-items:baseline;gap:2px}
+.sn .pl{color:var(--accent);font-size:1.4rem}
+.sl2{font-size:.73rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+@keyframes fu{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fd{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+.hiw{position:relative;display:flex;justify-content:center;animation:fu .9s .35s both}
+.hic{position:relative;width:320px;height:410px;border-radius:26px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:transform .1s linear;transform-style:preserve-3d}
+.hic img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(15%);transition:filter .4s,transform .5s;display:block}
+.hic:hover img{filter:grayscale(0%);transform:scale(1.05)}
+.hic::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,16,.7) 0%,transparent 52%)}
+.ig{position:absolute;inset:-3px;border-radius:29px;background:conic-gradient(var(--accent),var(--accent2),var(--accent3),var(--accent));opacity:.28;z-index:-1;filter:blur(14px);animation:sg 7s linear infinite}
+@keyframes sg{to{transform:rotate(360deg)}}
+.fc{position:absolute;background:rgba(5,8,16,.92);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:11px 16px;font-size:.78rem;font-weight:500;color:var(--text);display:flex;align-items:center;gap:9px;z-index:5}
+.fc1{bottom:-18px;left:-44px;animation:fl 3.2s ease-in-out infinite}
+.fc2{top:28px;right:-48px;animation:fl 3.2s ease-in-out 1.6s infinite}
+.fc3{top:50%;left:-54px;margin-top:-20px;animation:fl 3.2s ease-in-out .8s infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+#about .sw{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.aib{width:100%;border-radius:22px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/5;background:var(--surface);position:relative}
+.aib img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(15%);transition:filter .4s,transform .5s;display:block}
+.aib:hover img{filter:grayscale(0%);transform:scale(1.03)}
+.aim{position:relative}
+.afc{position:absolute;bottom:-22px;right:-22px;background:rgba(5,8,16,.97);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:18px;padding:22px;min-width:190px}
+.afc .bn{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;color:var(--accent);line-height:1}
+.afc p{font-size:.8rem;color:var(--muted);margin-top:5px}
+.act p{color:var(--muted);line-height:1.85;margin-bottom:15px;font-size:.95rem}
+.atgs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 32px}
+.tg{padding:6px 15px;border-radius:100px;border:1px solid var(--border);font-size:.78rem;color:var(--muted);background:var(--surface);transition:all .25s;cursor:default;user-select:none}
+.tg:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.08);transform:translateY(-2px)}
+/* EXPERIENCE */
+#experience{background:var(--bg2)}
+.etl{position:relative;padding-left:40px}
+.etl::before{content:'';position:absolute;left:12px;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent) 0%,var(--accent2) 60%,transparent 100%)}
+.ei{position:relative;padding:0 0 50px 36px}
+.ei:last-child{padding-bottom:0}
+.edot{position:absolute;left:-29px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent);transition:all .3s;z-index:2}
+.edot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .3s}
+.ei:hover .edot{box-shadow:0 0 0 6px rgba(0,212,255,.15)}
+.ei:hover .edot::after{transform:scale(1)}
+.ec{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);padding:28px 30px;transition:all .35s;position:relative;overflow:hidden}
+.ec::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.ec::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,212,255,.07) 0%,transparent 65%);opacity:0;transition:opacity .4s}
+.ec:hover{border-color:rgba(0,212,255,.22);transform:translateX(7px);background:var(--surface2)}
+.ec:hover::before,.ec:hover::after{opacity:1}
+.ehd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:16px;flex-wrap:wrap}
+.er{font-family:'Syne',sans-serif;font-size:1.12rem;font-weight:700;color:var(--heading)}
+.ep{font-size:.75rem;color:var(--accent);background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:100px;padding:4px 12px;white-space:nowrap;font-weight:500;letter-spacing:.04em}
+.eco{font-size:.9rem;color:var(--accent3);font-weight:500;margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.elo{font-size:.8rem;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.edd{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:16px}
+.etgs{display:flex;flex-wrap:wrap;gap:7px}
+.etg{padding:4px 11px;border-radius:100px;border:1px solid var(--border);font-size:.73rem;color:var(--muted);background:var(--surface)}
+/* SERVICES */
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc2{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);padding:36px 30px;transition:transform .3s,border-color .3s,background .3s;cursor:default;position:relative;overflow:hidden}
+.sc2::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.sc2::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,212,255,.08) 0%,transparent 65%);opacity:0;transition:opacity .4s}
+.sc2:hover{border-color:rgba(0,212,255,.25);transform:translateY(-7px);background:var(--surface2)}
+.sc2:hover::before,.sc2:hover::after{opacity:1}
+.sic{width:54px;height:54px;border-radius:16px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--accent);margin-bottom:26px;transition:transform .3s}
+.sc2:hover .sic{transform:scale(1.14) rotate(-7deg)}
+.sc2 h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--heading);margin-bottom:12px}
+.sc2 p{color:var(--muted);font-size:.87rem;line-height:1.75}
+/* SKILLS */
+.sklg{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.skc h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--heading);margin-bottom:32px}
+.tcs{display:flex;flex-wrap:wrap;gap:10px}
+.tcc{display:flex;align-items:center;gap:9px;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:11px;font-size:.84rem;color:var(--text);transition:all .25s;cursor:default;user-select:none;position:relative;overflow:hidden}
+.tcc::before{content:'';position:absolute;inset:0;background:rgba(0,212,255,.07);transform:scale(0);border-radius:inherit;transition:transform .3s}
+.tcc:hover::before{transform:scale(1)}
+.tcc:hover{border-color:var(--accent);transform:translateY(-3px) scale(1.04);box-shadow:0 7px 22px rgba(0,212,255,.15)}
+.tcc i{color:var(--accent);font-size:1rem;transition:transform .3s;position:relative;z-index:1}
+.tcc:hover i{transform:rotate(-12deg) scale(1.22)}.tcc span{position:relative;z-index:1}
+.sbi{margin-bottom:26px}
+.sbh{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
+.sbh span{font-size:.85rem;color:var(--text)}.sbh .pct{color:var(--accent);font-weight:600;font-size:.8rem}
+.sbt{height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.sbf{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent2),var(--accent));width:0;transition:width 1.4s cubic-bezier(.25,1,.5,1)}
+/* PROJECTS */
+.pfl{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap}
+.fb{padding:8px 20px;border-radius:100px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.8rem;cursor:none;transition:all .25s;font-family:'DM Sans',sans-serif;letter-spacing:.04em}
+.fb:hover,.fb.act{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.09)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s;cursor:none;position:relative}
+.pc.hd{display:none}.pc.fo{opacity:0;transform:scale(.93) translateY(8px)}.pc.fi{animation:pi .38s forwards}
+@keyframes pi{from{opacity:0;transform:scale(.93) translateY(8px)}to{opacity:1;transform:none}}
+.pc:hover{border-color:rgba(0,212,255,.28);transform:translateY(-9px) scale(1.015);box-shadow:0 28px 70px rgba(0,0,0,.55)}
+.piw{position:relative;overflow:hidden;height:185px}
+.pim{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(15%);transition:filter .4s,transform .55s}
+.pc:hover .pim{filter:grayscale(0%);transform:scale(1.1)}
+.pov{position:absolute;inset:0;background:rgba(5,8,16,.8);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s}
+.pc:hover .pov{opacity:1}
+.ob{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.09);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.92rem;transition:transform .28s,background .2s;cursor:none;transform:translateY(16px)}
+.pc:hover .ob{transform:translateY(0)}.ob:hover{background:var(--accent);border-color:var(--accent);color:#000;transform:scale(1.14) !important}
+.pb2{padding:24px}.ptg{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+.pb2 h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:10px;line-height:1.3}
+.pb2 p{color:var(--muted);font-size:.82rem;line-height:1.65}
+.mov{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.mov.op{opacity:1;pointer-events:all}
+.mb2{background:#080d1a;border:1px solid rgba(255,255,255,.09);border-radius:26px;max-width:650px;width:92%;max-height:88vh;overflow-y:auto;padding:42px;position:relative;transform:scale(.86) translateY(28px);transition:transform .4s cubic-bezier(.34,1.56,.64,1);scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.mov.op .mb2{transform:scale(1) translateY(0)}
+.mc{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--muted);cursor:none;transition:all .25s}
+.mc:hover{background:rgba(255,60,60,.15);border-color:rgba(255,60,60,.4);color:#ff4545;transform:rotate(90deg) scale(1.08)}
+.mim{width:100%;border-radius:16px;object-fit:cover;height:230px;margin-bottom:26px;display:block}
+.mtag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+.mttl{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--heading);margin-bottom:14px;line-height:1.2}
+.mdc{color:var(--muted);line-height:1.82;font-size:.92rem;margin-bottom:22px}
+.mts{display:flex;flex-wrap:wrap;gap:8px}
+.mtech{padding:5px 13px;border-radius:100px;border:1px solid var(--border);font-size:.74rem;color:var(--muted);background:var(--surface)}
+/* CONTACT */
+.ci{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.cih h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--heading);margin-bottom:16px}
+.cih>p{color:var(--muted);line-height:1.8;margin-bottom:36px;font-size:.95rem}
+.cdet{display:flex;flex-direction:column;gap:14px}
+.cit{display:flex;align-items:center;gap:15px;padding:15px 20px;background:var(--surface);border:1px solid var(--border);border-radius:13px;transition:all .28s}
+.cit:hover{border-color:rgba(0,212,255,.3);transform:translateX(7px);background:rgba(0,212,255,.03)}
+.cion{width:40px;height:40px;border-radius:11px;background:rgba(0,212,255,.1);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:.9rem;flex-shrink:0}
+.ctx span{font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:2px}
+.ctx a,.ctx p{font-size:.88rem;color:var(--text);text-decoration:none;margin:0;transition:color .2s}
+.ctx a:hover{color:var(--accent)}
+.socl{display:flex;gap:11px;margin-top:26px}
+.sol{width:43px;height:43px;border:1px solid var(--border);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.92rem;text-decoration:none;transition:all .28s;cursor:none}
+.sol:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.09);transform:translateY(-4px) rotate(-7deg)}
+.cf{display:flex;flex-direction:column;gap:16px}
+.fg{display:flex;flex-direction:column;gap:8px;position:relative}
+.fg label{font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);transition:color .22s}
+.fg:focus-within label{color:var(--accent)}
+.fg input,.fg textarea{background:var(--surface);border:1.5px solid var(--border);border-radius:11px;padding:14px 17px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .25s,box-shadow .25s,background .25s;resize:none;cursor:none}
+.fg input:focus,.fg textarea:focus{border-color:rgba(0,212,255,.45);box-shadow:0 0 0 4px rgba(0,212,255,.07);background:rgba(0,212,255,.03)}
+.fg textarea{min-height:130px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cc{position:absolute;bottom:12px;right:14px;font-size:.72rem;color:var(--muted);pointer-events:none}
+.cc.wn{color:orange}.cc.ov{color:#ff5050}
+#sb{position:relative;min-width:170px;justify-content:center}
+.sp{display:none;width:16px;height:16px;border:2px solid rgba(0,0,0,.3);border-top-color:#000;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.snote{background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.2);border-radius:14px;padding:18px 20px;margin-bottom:20px;font-size:.83rem;color:var(--muted);line-height:1.75}
+.snote strong{color:var(--accent);display:block;margin-bottom:6px}
+.snote code{color:var(--accent3);background:rgba(0,0,0,.3);padding:1px 5px;border-radius:4px}
+footer{border-top:1px solid var(--border);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer p{color:var(--muted);font-size:.82rem}
+.bkt{display:flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-size:.82rem;cursor:none;border:1px solid var(--border);padding:8px 16px;border-radius:9px;transition:all .28s}
+.bkt:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-3px)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .72s ease,transform .72s ease}
+.rv.vi{opacity:1;transform:none}
+.rvl{opacity:0;transform:translateX(-36px);transition:opacity .72s ease,transform .72s ease}
+.rvl.vi{opacity:1;transform:none}
+.rvr{opacity:0;transform:translateX(36px);transition:opacity .72s ease,transform .72s ease}
+.rvr.vi{opacity:1;transform:none}
+@media(max-width:1024px){.hi{grid-template-columns:1fr}.hiw{display:none}#about .sw{grid-template-columns:1fr}.aim{display:none}.sg{grid-template-columns:repeat(2,1fr)}.pg{grid-template-columns:repeat(2,1fr)}.sklg{grid-template-columns:1fr}.ci{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:16px 22px}nav.sc{padding:12px 22px}.navl{display:none}.hbg{display:flex}.sw{padding:68px 22px}.sg,.pg{grid-template-columns:1fr}#home{padding:100px 22px 60px}footer{flex-direction:column;gap:12px;text-align:center;padding:22px}.hs{gap:22px}.div{margin:0 22px}.frow{grid-template-columns:1fr}.etl{padding-left:24px}.edot{left:-17px}}
+</style>
 </head>
-
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <!-- <button class="theme-toggle" id="theme-toggle">🌙</button> -->
-
-        <button class="menu-btn" id="menu-btn">☰</button>
-
-
-        <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#services" style="--i:3">Services</a>
-            <a href="#skills" style="--i:4">Skills</a>
-            <a href="#projects" style="--i:5">Projects</a>
-            <a href="#contact" style="--i:6">Contact</a>
-        </nav>
-        <!-- Mobile Dropdown Menu -->
-<div class="mobile-menu" id="mobile-menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+<div id="pb"></div>
+<div class="cDot" id="cDot"></div>
+<div class="cRing" id="cRing"></div>
+<canvas id="pCanvas"></canvas>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<div class="toast" id="toast"></div>
+<div class="mmenu" id="mm">
+  <a href="#home"       onclick="cM()">Home</a>
+  <a href="#about"      onclick="cM()">About</a>
+  <a href="#experience" onclick="cM()">Experience</a>
+  <a href="#services"   onclick="cM()">Services</a>
+  <a href="#skills"     onclick="cM()">Skills</a>
+  <a href="#projects"   onclick="cM()">Projects</a>
+  <a href="#contact"    onclick="cM()">Contact</a>
 </div>
-
-    </header>
-    <section class="home" id="home"">
-        <div class="home-content">
-            <h3>Hello, It's</h3>
-            <h1>ADIL ASLAM K V</h1>
-            <h3>And i'm a <span class="text"></span></h3>
-            <p class="about-text">I'm a passionate Web and Mobile Application Developer specializing in Flutter.
-                I build high-quality, responsive, and user-centric apps and modern websites with a strong focus on
-                performance, scalability, and clean UI/UX design.
-                Currently working as a Flutter Developer Intern in Thiruvananthapuram, India, where I integrate
-                machine learning capabilities such as email spam detection, automatic reply suggestions, content
-                summarization, and hate speech detection into mobile applications.
-                I have hands-on experience in both frontend and backend development, API integration, and deploying
-                applications on various platforms.
-                Having recently completed my Master’s degree in September 2025, I continue to explore new
-                technologies and hybrid frameworks to create smarter, data-driven digital solutions that enhance user
-                experience and efficiency.
-                My goal is to combine creativity with technology to build impactful applications that make a
-                difference.
-            </p>
-            <div class="home-sci">
-                <a href="https://www.facebook.com/aslam.kv.5" style="--i:7"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/aadil_kv/?hl=en" style="--i:8"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/adilaslamkv/" style="--i:9"><i class='bx bxl-linkedin'></i></i></a>
-                <a href="https://x.com/adil29030" style="--i:10"><i class="bx bxl-twitter"></i></a>
-                <a href="https://github.com/adilaslamkv" style="--i:11"><i class="bx bxl-github"></i></a>
-            </div>
-            <a href="#" class="btn-box">More About Me</a>
-        </div>
-        <div class="home-content-right" style="color: #081b29;">
-            <img src="image/adilkv.jpg" alt="Adil Profile Image" style="color: black;" class="circle-image">
-        </div>
-        <span class="home-imgHover"></span>
-    </section>
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="image/adilkv.jpg" alt="Adil about image" style="color: black;" class="circle-image">
-        </div>
-        <div class="about-text">
-            <h2>About<span>Me</span></h2>
-            <h4><span class="text1"></span></h4>
-           <p class="about-text">
-                I am a skilled Full Stack Developer with strong expertise in building dynamic web and mobile
-                applications.
-                I have hands-on experience in both frontend and backend technologies, crafting efficient, secure,
-                and scalable solutions.
-                My skill set includes HTML, CSS, JavaScript, PHP, MySQL, and Flutter for hybrid mobile app
-                development.
-               I’m also passionate about integrating machine learning models into applications, enabling
-                intelligent features like content summarization, spam detection, and smart reply suggestions.
-                With a strong foundation in clean coding practices, API integration, and responsive UI design, I
-                strive to deliver seamless digital experiences that combine functionality and innovation.
-            </p>
-            <a href="#" class="btn-box">More About Me</a>
-
-        </div>
-    </section>
-   <section id="services">
-        <div class="services" id="services">
-            <div class="container">
-                <h1 class="sub-title">My <span>Services</span></h1>
-                <div class="services-list">
-                    <div>
-                        <i class="bx bx-code" style="color: #0ef;"></i>
-                        <h2>Frontend Development</h2>
-                        <p>
-                            Experienced in creating responsive and interactive user interfaces using HTML, CSS,
-                            JavaScript, and Flutter.
-                            I focus on building clean, efficient, and user-friendly designs that provide seamless user
-                            experiences across web and mobile platforms.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bx-server' style='color:#00eeff'></i>
-                        <h2>Backend Development</h2>
-                        <p>
-                            Skilled in developing robust backend systems using PHP and MySQL.
-                            I design efficient APIs, manage databases, and ensure secure communication between client
-                            and server for scalable application performance.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bxl-flutter' style='color:#00eeff'></i>
-                        <h2>Flutter App Development</h2>
-                        <p>
-                            Proficient in developing cross-platform mobile applications using Flutter.
-                            I specialize in crafting visually appealing and high-performance apps for Android and iOS
-                            with integrated ML features.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bx-brain' style='color:#00eeff'></i>
-                        <h2>Machine Learning Integration</h2>
-                        <p>
-                            Experienced in implementing intelligent features such as email spam detection, automatic
-                            reply suggestions,
-                            hate speech detection, and content summarization in mobile applications.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bx-paint' style='color:#00eeff'></i>
-                        <h2>UI/UX Design</h2>
-                        <p>
-                            Focused on creating intuitive and modern user interfaces with a strong emphasis on
-                            usability, color theory, and visual appeal.
-                            I ensure that every design element enhances the user experience.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-
-                    <div>
-                        <i class='bx bx-link-alt' style='color:#00eeff'></i>
-                        <h2>API Integration</h2>
-                        <p>
-                            Skilled in connecting apps with RESTful APIs and third-party services to enhance
-                            functionality and improve user engagement.
-                            I ensure smooth communication between frontend and backend systems.
-                        </p>
-                        <a href="#" class="read">Learn more</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <h1 class="sub-title">My<span> Skills</span></h1>
-    <section class="skills" id="skills" >
-        <div class="container1" id="Skills">
-            <h1 class="heading1">Technical Skills</h1>
-            <div class="Technical-bars">
-                <div class="bar"><i class='bx bxl-html5' style='color:#c95d2e' ></i>
-                    <div class="info">
-                        <span>HTML</span>
-                    </div>
-                    <div class="progress-line html">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-css3' style='color:#147bbc' ></i>
-                    <div class="info">
-                        <span>CSS</span>
-                    </div>
-                    <div class="progress-line css">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-javascript' style='color:#b0bc1e' ></i>
-                    <div class="info">
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="progress-line js">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-python' style='color:#c32ec9' ></i>
-                    <div class="info">
-                        <span>Python</span>
-                    </div>
-                    <div class="progress-line python">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-flutter' style='color:#0553B1' ></i>
-                    <div class="info">
-                        <span>Flutter</span>
-                    </div>
-                    <div class="progress-line flutter">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-php' style='color:#0553B1'></i>
-                    <div class="info">
-                        <span>PhP</span>
-                    </div>
-                    <div class="progress-line php">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='fas fa-robot'></i>
-                    <div class="info">
-                        <span>Machile Learning</span>
-                    </div>
-                    <div class="progress-line flutter">
-                        <span></span>
-                    </div>
-                </div>
-                <div class="bar"><i class='bx bxl-flutter' style='color:#0553B1' ></i>
-                    <div class="info">
-                        <span>Flutter</span>
-                    </div>
-                    <div class="progress-line flutter">
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container1">
-            <h1 class="heading1">Professional Skills</h1>
-            <div class="radial-bars">
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Creativity</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">80%</div>
-                    <div class="text">Communication</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">75%</div>
-                    <div class="text">Teamwork</div>
-                </div>
-                <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">85%</div>
-                    <div class="text">Leadership</div>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-   <section id="projects">
-        <div id="portfolio" id="Project">
-            <div class="main-text" id="Project">
-                <h2>Latest <span>Projects</span></h2>
-                <div class="portfolio-content">
-
-                    <!-- AI-Powered Mobile App -->
-                    <div class="row">
-                        <img src="image/ml.jpg" alt="ML Integrated App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>AI-Powered Mobile App</h5>
-                            <p>
-                                Flutter mobile app with ML features: email spam detection, auto reply suggestions,
-                                content summarization, and hate speech filtering.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Real Estate Web App -->
-                    <div class="row">
-                        <img src="image/realestateimg.png" alt="Real Estate Website" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>Real Estate Mobile Application</h5>
-                            <p>
-                                PHP-based platform for managing property listings, admin controls, and user exploration.
-                                Black-themed, responsive UI.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Personal Portfolio -->
-                    <!-- YoHire Flutter App -->
-                    <div class="row">
-                        <img src="image/yohire.png" alt="YoHire App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>YoHire - Job Finder App</h5>
-                            <p>
-                                A Flutter-based mobile app that connects job seekers with employers. Features include
-                                user authentication, job listing, application tracking, and real-time notifications.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- FitSea Flutter App -->
-                    <div class="row">
-                        <img src="image/fitsea.jpg" alt="FitSea App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>FitSea - Fitness & Wellness App</h5>
-                            <p>
-                                A Flutter mobile application focused on fitness and wellness. Includes workout tracking,
-                                personalized plans, progress analytics, and content recommendations.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Final Year Project -->
-                    <div class="row">
-                        <img src="image/cyberbullyingimg.jpg" alt="Cyberbullying Detection Project" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>Cyberbullying Detection for Low-Resource Languages</h5>
-                            <p>
-                                Final year project focusing on detecting cyberbullying in low-resource languages using
-                                NLP and machine learning techniques.
-                                The system analyzes social media comments and flags harmful content, providing safer
-                                online interactions.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-
-                    <!-- Email Automation App -->
-                    <div class="row">
-                        <img src="image/emailimg.png" alt="Email Automation App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>Email Automation App</h5>
-                            <p>
-                                Flutter app with ML-based email automation: smart replies, spam filtering, and auto
-                                sorting. Focused on productivity enhancement.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Content Summarizer App -->
-                    <div class="row">
-                        <img src="image/summarizer.jpg" alt="Content Summarizer App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>Content Summarizer App</h5>
-                            <p>
-                                Flutter app leveraging ML to summarize text content automatically for users, improving
-                                reading efficiency and workflow.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Hate Speech Detection App -->
-                    <div class="row">
-                        <img src="image/hate.jpg" alt="Hate Speech Detection App" style="color: #0ef;">
-                        <div class="layer">
-                            <h5>Hate Speech Detection App</h5>
-                            <p>
-                                Mobile app that detects hate speech in messages using machine learning models. Built
-                                with Flutter for cross-platform use.
-                            </p>
-                            <a href="#"><i class="bx bx-link-external" style="color: #081b29;"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="contact-text">
-            <h2>Contact<span> Me</span></h2>
-            <h4>Let's Work Togather</h4>
-            <p>explain about yours </p>
-           <div class="contact-list">
-                <li><i class="bx bxs-send"></i> kvadilaslam@gmail.com</li>
-                <li><i class="bx bxs-phone"></i> 9544907667</li>
-            </div>
-            <div class="contact-icons">
-                <a href="https://www.facebook.com/aslam.kv.5" style="--i:7"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/aadil_kv/?hl=en" style="--i:8"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/adilaslamkv/" style="--i:9"><i class='bx bxl-linkedin'></i></i></a>
-                <a href="https://x.com/adil29030" style="--i:10"><i class="bx bxl-twitter"></i></a>
-                <a href="https://github.com/adilaslamkv" style="--i:11"><i class="bx bxl-github"></i></a>
-            </div>
-        </div>
-       <div class="contact-form">
-            <form action="send_mail.php" method="POST">
-                <input type="text" name="name" placeholder="Enter your Name" required>
-                <input type="email" name="email" placeholder="Enter your Email" required>
-                <input type="text" name="subject" placeholder="Enter your Subject">
-                <textarea name="message" cols="40" rows="10" placeholder="Enter your Message"></textarea>
-                <input type="submit" value="Submit" class="send">
-            </form>
-        </div>
-    </section>
-    <div class="last-text">
-        <p>Developed by ADIL ASLAM KV © 2025</p>
+<div class="mov" id="pModal"><div class="mb2"><div class="mc" id="mCls"><i class="fas fa-times"></i></div><img class="mim" id="mImg" src="" alt=""/><div class="mtag" id="mTag"></div><h2 class="mttl" id="mTtl"></h2><p class="mdc" id="mDsc"></p><div class="mts" id="mTcs"></div></div></div>
+<nav id="nav">
+  <a href="#home" class="logo">ADIL ASLAM K V<span></span></a>
+  <ul class="navl" id="navl">
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li><li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hbg" id="hbg" onclick="tM()"><span></span><span></span><span></span></div>
+</nav>
+<section id="home">
+  <div class="hi">
+    <div>
+      <div class="hb"><span class="bd"></span>Available for opportunities</div>
+      <h1 class="ht">ADIL<br><span class="gt">ASLAM<br> K V</span></h1>
+      <div class="tw"><span id="tEl"></span><span class="tc">|</span></div>
+      <p class="hd">Passionate Flutter &amp; Full Stack Developer building high-quality, responsive, and user-centric applications. Currently working as a Flutter Developer Intern in Thiruvananthapuram, integrating ML capabilities into production mobile apps.</p>
+      <div class="hca">
+        <a href="#projects" class="btp mb"><i class="fas fa-eye"></i> View Projects</a>
+        <a href="#contact"  class="bto mb"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+      </div>
+      <div class="hs">
+        <div class="stat"><div class="sn"><span class="ctr" data-t="8">0</span><span class="pl">+</span></div><div class="sl2">Projects Done</div></div>
+        <div class="stat"><div class="sn"><span class="ctr" data-t="2">0</span><span class="pl">+</span></div><div class="sl2">Years Exp.</div></div>
+        <div class="stat"><div class="sn"><span class="ctr" data-t="12">0</span><span class="pl">+</span></div><div class="sl2">Technologies</div></div>
+      </div>
     </div>
-    <a href="#" class="top"><i class="bx bx-up-arrow-alt" ></i></a>
-    <script src="main.js"></script>
+    <div class="hiw">
+      <div class="ig"></div>
+      <div class="hic" id="hCard"><img src="image/Adil1.jpg" alt="Adil Aslam KV"/></div>
+      <div class="fc fc1"><span>🚀</span> Flutter Developer</div>
+      <div class="fc fc2"><span>🤖</span> AI/ML Integration</div>
+      <div class="fc fc3"><span>🎓</span> M.Sc. Graduate</div>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+<section id="about">
+  <div class="sw">
+    <div class="aim rvl">
+      <div class="aib"><img src="image/adil.PNG" alt="Adil"/></div>
+      <div class="afc"><div class="bn"><span class="ctr" data-t="1">0</span>+</div><p>Year professional exp.</p></div>
+    </div>
+    <div class="act">
+      <div class="sl rv">About Me</div>
+      <h2 class="st rv">Crafting Digital<br>Experiences</h2>
+      <p class="rv">I'm a skilled Full Stack Developer with strong expertise in dynamic web and mobile applications. Hands-on experience in both frontend and backend technologies — building efficient, secure, scalable solutions.</p>
+      <p class="rv">Passionate about integrating machine learning into real-world apps — enabling intelligent features like content summarization, spam detection, and smart reply suggestions.</p>
+      <p class="rv">Having completed my Master's in September 2025, I continue exploring hybrid frameworks and emerging technologies to create smarter, data-driven digital solutions.</p>
+      <div class="atgs rv"><span class="tg">Flutter</span><span class="tg">Full Stack</span><span class="tg">ML Integration</span><span class="tg">PHP &amp; MySQL</span><span class="tg">API Design</span><span class="tg">UI/UX</span><span class="tg">Python</span><span class="tg">JavaScript</span></div>
+      <a href="C:\Users\kvadi\OneDrive\Desktop\adil_new_cv.pdf" class="btp mb rv" style="width:fit-content"><i class="fas fa-file-alt"></i> Download CV</a>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+<section id="experience">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:60px"><div class="sl">Career Path</div><h2 class="st">My Experience</h2><p class="sd">A timeline of my professional journey, internships, and academic milestones.</p></div>
+    <div class="etl">
+      <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd"><div class="er">Mobile Application Developer</div><span class="ep">Aug 2025 – Present</span></div>
+        <div class="eco"><i class="fas fa-building"></i> Creative App Lab</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</div>
+        <p class="edd">Developing cross-platform mobile applications using Flutter with integrated machine learning capabilities. Building email spam detection modules, automatic reply suggestion systems, content summarization APIs, and hate speech detection features. Collaborating with backend teams to design and consume RESTful APIs efficiently.</p>
+        <div class="etgs"><span class="etg">Flutter</span><span class="etg">Dart</span><span class="etg">ML Integration</span><span class="etg">Python</span><span class="etg">REST APIs</span><span class="etg">Firebase</span></div>
+      </div></div>
+      <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd"><div class="er">Flutter Developer Intern</div><span class="ep">Mar 2025 – Aug 2025</span></div>
+        <div class="eco"><i class="fas fa-laptop-code"></i> Creative App Lab </div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</div>
+        <p class="edd">Designed and developed multiple web and mobile applications for various clients. Built PHP/MySQL backends with secure authentication and responsive frontends. Created real estate platforms, job listing portals, and custom business applications with clean UI/UX and optimized database architecture.</p>
+        <div class="etgs"><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">JavaScript</span><span class="etg">HTML/CSS</span><span class="etg">Flutter</span><span class="etg">UI/UX</span></div>
+      </div></div>
+ <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd"><div class="er">Flutter Developer Intern</div><span class="ep">Aug 2022 – Jan 2023</span></div>
+        <div class="eco"><i class="fas fa-laptop-code"></i> Foxfennecs Technologies LLP</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kozhikode, Kerala, India</div>
+        <p class="edd">Designed and developed multiple web and mobile applications for various clients. Built PHP/MySQL backends with secure authentication and responsive frontends. Created real estate platforms, job listing portals, and custom business applications with clean UI/UX and optimized database architecture.</p>
+        <div class="etgs"><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">JavaScript</span><span class="etg">HTML/CSS</span><span class="etg">Flutter</span><span class="etg">UI/UX</span></div>
+      </div></div>
+      
+    </div>
+  </div>
+</section>
+<section id="education">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:60px"><div class="sl">Career Path</div><h2 class="st">My Educational Qualifications </h2><p class="sd">A timeline of my academic milestones.</p></div>
+    <div class="etl">
+<div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd"><div class="er">M.Sc. Computer Science</div><span class="ep">2023 – 2025</span></div>
+        <div class="eco"><i class="fas fa-graduation-cap"></i> University — Kerala, India</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kerala, India</div>
+        <p class="edd">Master's degree in Computer Science with focus on Machine Learning, NLP, and Mobile App Development. Final year project: Cyberbullying Detection for Low-Resource Languages — using NLP and ML techniques to analyze social media content and flag harmful interactions. Graduated September 2025.</p>
+        <div class="etgs"><span class="etg">Machine Learning</span><span class="etg">NLP</span><span class="etg">Python</span><span class="etg">Research</span><span class="etg">Data Science</span><span class="etg">Deep Learning</span></div>
+      </div></div>
+      <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd"><div class="er">B.Sc. Computer Science</div><span class="ep">2020 – 2023</span></div>
+        <div class="eco"><i class="fas fa-graduation-cap"></i> College — Kerala, India</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kerala, India</div>
+        <p class="edd">Bachelor's degree in Computer Science. Built a strong foundation in programming, data structures, algorithms, web development, and database management. Developed academic projects using PHP, MySQL, HTML/CSS, and JavaScript. Active in coding competitions and tech fests.</p>
+        <div class="etgs"><span class="etg">C/C++</span><span class="etg">Java</span><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">Web Dev</span><span class="etg">DSA</span></div>
+      </div></div>
+  </div>
+  </div>
+
+
+<div class="div"></div>
+<section id="services" style="background:var(--bg2)">
+  <div class="sw">
+    <div class="rv" style="text-align:center;margin-bottom:60px"><div class="sl" style="justify-content:center">What I Do</div><h2 class="st">My Services</h2><p class="sd" style="margin:0 auto;text-align:center">I offer a wide range of development services to bring your digital ideas to life.</p></div>
+    <div class="sg">
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-code"></i></div><h3>Frontend Development</h3><p>Responsive and interactive UIs using HTML, CSS, JavaScript, and Flutter. Clean, efficient designs across web and mobile platforms.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-server"></i></div><h3>Backend Development</h3><p>Robust systems using PHP and MySQL. Efficient APIs, database management, and secure client-server communication.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-mobile-alt"></i></div><h3>Flutter App Development</h3><p>Cross-platform apps for Android and iOS — visually appealing, high-performance, with integrated ML features and smooth UX.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-brain"></i></div><h3>ML Integration</h3><p>Intelligent features: spam detection, auto reply, hate speech detection, and content summarization in production apps.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-palette"></i></div><h3>UI/UX Design</h3><p>Intuitive, modern interfaces with strong emphasis on usability, color theory, and visual appeal for seamless experiences.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-plug"></i></div><h3>API Integration</h3><p>Connecting apps with RESTful APIs and third-party services. Smooth communication between frontend and backend systems.</p></div>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+<section id="skills">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:60px"><div class="sl">Expertise</div><h2 class="st">My Skills</h2></div>
+    <div class="sklg">
+      <div><div class="rv"><div class="skc"><h3>Technical Stack</h3></div></div>
+        <div class="tcs rv">
+          <div class="tcc"><i class="fab fa-html5"></i><span>HTML5</span></div><div class="tcc"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="tcc"><i class="fab fa-js"></i><span>JavaScript</span></div><div class="tcc"><i class="fab fa-python"></i><span>Python</span></div>
+          <div class="tcc"><i class="fab fa-php"></i><span>PHP</span></div><div class="tcc"><i class="fas fa-database"></i><span>MySQL</span></div>
+          <div class="tcc"><i class="fas fa-mobile-alt" style="color:#54c5f8"></i><span>Flutter/Dart</span></div><div class="tcc"><i class="fas fa-robot"></i><span>Machine Learning</span></div>
+          <div class="tcc"><i class="fas fa-code-branch"></i><span>Git/GitHub</span></div><div class="tcc"><i class="fas fa-cloud"></i><span>REST APIs</span></div>
+          <div class="tcc"><i class="fas fa-fire"></i><span>Firebase</span></div><div class="tcc"><i class="fas fa-layer-group"></i><span>NLP</span></div>
+        </div>
+      </div>
+      <div><div class="rv"><div class="skc"><h3>Professional Skills</h3></div></div>
+        <div id="sbw" class="rv">
+          <div class="sbi"><div class="sbh"><span>Creativity</span><span class="pct">90%</span></div><div class="sbt"><div class="sbf" data-w="90"></div></div></div>
+          <div class="sbi"><div class="sbh"><span>Leadership</span><span class="pct">85%</span></div><div class="sbt"><div class="sbf" data-w="85"></div></div></div>
+          <div class="sbi"><div class="sbh"><span>Communication</span><span class="pct">80%</span></div><div class="sbt"><div class="sbf" data-w="80"></div></div></div>
+          <div class="sbi"><div class="sbh"><span>Teamwork</span><span class="pct">75%</span></div><div class="sbt"><div class="sbf" data-w="75"></div></div></div>
+          <div class="sbi"><div class="sbh"><span>Problem Solving</span><span class="pct">88%</span></div><div class="sbt"><div class="sbf" data-w="88"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+<section id="projects" style="background:var(--bg2)">
+  <div class="sw">
+    <div class="rv" style="text-align:center;margin-bottom:40px"><div class="sl" style="justify-content:center">Portfolio</div><h2 class="st">Latest Projects</h2><p class="sd" style="margin:0 auto;text-align:center;margin-bottom:30px">A selection of my recent work across mobile, web, and AI-powered applications.</p></div>
+    <div class="pfl rv">
+      <button class="fb act" data-f="all">All</button><button class="fb" data-f="flutter">Flutter</button>
+      <button class="fb" data-f="ml">ML / AI</button><button class="fb" data-f="web">Web</button>
+    </div>
+    <div class="pg" id="pg">
+      <div class="pc rv" data-cat="flutter ml" data-title="AI-Powered Mobile App" data-tag="Flutter · ML" data-img="image/ml.jpg" data-desc="Flutter mobile app with ML: email spam detection, automatic reply suggestions, content summarization, and hate speech filtering." data-techs="Flutter,Dart,Python,TensorFlow,Firebase"><div class="piw"><img class="pim" src="image/ml.jpg" alt="AI"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>AI-Powered Mobile App</h3><p>Flutter app with ML: spam detection, auto reply, summarization, and hate speech filtering.</p></div></div>
+      <div class="pc rv" data-cat="web" data-title="Real Estate Application" data-tag="PHP · MySQL" data-img="image/realestateimg.png" data-desc="PHP-based platform for managing property listings with admin controls and user exploration. Black-themed, responsive UI." data-techs="PHP,MySQL,HTML,CSS,JavaScript"><div class="piw"><img class="pim" src="image/realestateimg.png" alt="Real Estate"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">PHP · MySQL</span><h3>Real Estate Application</h3><p>Platform for property listings, admin controls, and responsive UI.</p></div></div>
+      <div class="pc rv" data-cat="flutter" data-title="YoHire - Job Finder App" data-tag="Flutter" data-img="image/yohire.png" data-desc="Flutter app connecting job seekers with employers. User authentication, job listings, application tracking, and real-time notifications." data-techs="Flutter,Dart,Firebase,REST API"><div class="piw"><img class="pim" src="image/yohire.png" alt="YoHire"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter</span><h3>YoHire - Job Finder App</h3><p>Connects job seekers with employers. Auth, listings, tracking, notifications.</p></div></div>
+      <div class="pc rv" data-cat="flutter" data-title="FitSea - Fitness App" data-tag="Flutter" data-img="image/fitsea.jpg" data-desc="Flutter app for fitness and wellness. Workout tracking, personalized plans, progress analytics, and ML recommendations." data-techs="Flutter,Dart,Firebase,Charts"><div class="piw"><img class="pim" src="image/fitsea.jpg" alt="FitSea"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter</span><h3>FitSea - Fitness &amp; Wellness</h3><p>Workout tracking, personalized plans, progress analytics, and recommendations.</p></div></div>
+      <div class="pc rv" data-cat="ml" data-title="Cyberbullying Detection" data-tag="Python · NLP · ML" data-img="image/cyberbullyingimg.jpg" data-desc="Final year project detecting cyberbullying in low-resource languages using NLP and ML. Analyzes social media and flags harmful content." data-techs="Python,NLP,scikit-learn,Transformers,Flask"><div class="piw"><img class="pim" src="image/cyberbullyingimg.jpg" alt="Cyberbullying"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Python · NLP · ML</span><h3>Cyberbullying Detection</h3><p>Detects cyberbullying in low-resource languages using NLP and flags harmful content.</p></div></div>
+      <div class="pc rv" data-cat="flutter ml" data-title="Email Automation App" data-tag="Flutter · ML" data-img="image/emailimg.png" data-desc="Flutter app with ML-based email automation: smart replies, spam filtering, and automatic sorting for better productivity." data-techs="Flutter,Dart,Python,ML Models,REST API"><div class="piw"><img class="pim" src="image/emailimg.png" alt="Email"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Email Automation App</h3><p>ML-based email automation: smart replies, spam filtering, and auto sorting.</p></div></div>
+      <div class="pc rv" data-cat="flutter ml" data-title="Content Summarizer App" data-tag="Flutter · ML" data-img="image/summarizer.jpg" data-desc="Flutter app leveraging ML to automatically summarize text content for improved reading efficiency and workflow." data-techs="Flutter,Dart,NLP,REST API,Python"><div class="piw"><img class="pim" src="image/summarizer.jpg" alt="Summarizer"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Content Summarizer App</h3><p>ML-powered text summarization for improved reading efficiency.</p></div></div>
+      <div class="pc rv" data-cat="flutter ml" data-title="Hate Speech Detection App" data-tag="Flutter · ML" data-img="image/hate.jpg" data-desc="Cross-platform app detecting hate speech in messages using ML models. Built with Flutter for Android and iOS." data-techs="Flutter,Dart,TensorFlow,Python,Firebase"><div class="piw"><img class="pim" src="image/hate.jpg" alt="Hate Speech"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Hate Speech Detection App</h3><p>Detects hate speech using ML. Built with Flutter for cross-platform use.</p></div></div>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+<section id="contact">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:60px"><div class="sl">Get In Touch</div><h2 class="st">Let's Work Together</h2><p class="sd">Have a project in mind? I'm available for freelance and full-time opportunities. Every message goes directly to my inbox.</p></div>
+    <div class="ci">
+      <div class="cih rvl">
+        <h3>Contact Information</h3>
+        <p>Feel free to reach out for collaborations, project inquiries, or just to say hello. I typically reply within 24 hours.</p>
+        <div class="cdet">
+          <div class="cit"><div class="cion"><i class="fas fa-envelope"></i></div><div class="ctx"><span>Email</span><a href="mailto:kvadilaslam@gmail.com">kvadilaslam@gmail.com</a></div></div>
+          <div class="cit"><div class="cion"><i class="fas fa-phone"></i></div><div class="ctx"><span>Phone</span><a href="tel:+919544907667">+91 9544907667</a></div></div>
+          <div class="cit"><div class="cion"><i class="fas fa-map-marker-alt"></i></div><div class="ctx"><span>Location</span><p>Thiruvananthapuram, Kerala, India</p></div></div>
+          <div class="cit"><div class="cion"><i class="fas fa-clock"></i></div><div class="ctx"><span>Response Time</span><p>Usually within 24 hours</p></div></div>
+        </div>
+        <div class="socl">
+          <a href="https://github.com/adilaslamkv" class="sol" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/adilaslamkv/" class="sol" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/aadil_kv/?hl=en" class="sol" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://web.whatsapp.com/" class="sol" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+      </div>
+      <div class="rvr">
+       
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+        <form class="cf" 
+action="https://docs.google.com/forms/d/e/1FAIpQLSdZiBe6qn4tKr4poI_xeG-SzqfXp38h-KESHYe8aKOAuMC9Cg/formResponse" 
+  method="POST"
+target="hidden_iframe"
+onsubmit="submitted=true;">
+<input type="hidden" name="fvv" value="1">
+<input type="hidden" name="fbzx" value="1234567890">
+<input type="hidden" name="pageHistory" value="0">
+          <div class="frow">
+            <div class="fg"><label for="fn">First Name *</label><input type="text" id="fn" name="entry.807600390" placeholder="John" required/></div>
+            <div class="fg"><label for="ln">Last Name *</label><input type="text" id="ln" name="entry.1252414643" placeholder="Doe"/></div>
+          </div>
+          <div class="fg"><label for="em">Email Address *</label><input type="email" id="em" name="entry.1936528767" placeholder="john@example.com" required/></div>
+ <div class="fg"><label for="su">Phone Number *</label><input type="text" id="su" name="entry.1692214077" placeholder="9876543210" required/></div>
+          <div class="fg"><label for="su">Subject *</label><input type="text" id="su" name="entry.2118053347" placeholder="Project Inquiry" required/></div>
+          <div class="fg" style="position:relative">
+            <label for="ms">Message * <small style="font-size:.7rem;color:var(--muted);text-transform:none;letter-spacing:0">(min 20 chars)</small></label>
+            <textarea id="ms" name="entry.1651721601" placeholder="Tell me about your project, timeline, budget..." required maxlength="2000"></textarea>
+            <span class="cc" id="cc">0 / 2000</span>
+          </div>
+<button type="submit" class="btp mb" id="sb">Send Message</button>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© 2026 <strong style="color:var(--text)">ADIL ASLAM K V</strong>. All rights reserved.</p>
+  <a href="#home" class="bkt">Back to top <i class="fas fa-arrow-up"></i></a>
+</footer>
+<script>
+var submitted = false;
+
+document.getElementById("hidden_iframe").onload = function () {
+    if (submitted) {
+        alert("✅ Message sent successfully!");
+        document.getElementById("cForm").reset();
+        submitted = false;
+    }
+};
+
+/* 1. PARTICLES */
+(function(){
+  const cv=document.getElementById('pCanvas'),ctx=cv.getContext('2d');
+  let W,H,pts=[],mx=null,my=null;
+  const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight};
+  resize();addEventListener('resize',resize);
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  class P{
+    constructor(){this.reset(true)}
+    reset(init=false){this.x=Math.random()*W;this.y=init?Math.random()*H:(Math.random()<.5?-4:H+4);this.r=Math.random()*1.5+.3;this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;this.a=Math.random()*.5+.12;this.c=Math.random()<.6?'0,212,255':'124,58,237'}
+    tick(){this.x+=this.vx;this.y+=this.vy;if(mx){const dx=mx-this.x,dy=my-this.y,d=Math.hypot(dx,dy);if(d<120){this.x-=dx*.028;this.y-=dy*.028}}if(this.x<-5||this.x>W+5||this.y<-5||this.y>H+5)this.reset()}
+    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(${this.c},${this.a})`;ctx.fill()}
+  }
+  for(let i=0;i<140;i++)pts.push(new P());
+  function connect(){for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);if(d<88){ctx.beginPath();ctx.strokeStyle=`rgba(0,212,255,${.2*(1-d/88)})`;ctx.lineWidth=.4;ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}}
+  (function loop(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.tick();p.draw()});connect();requestAnimationFrame(loop)})();
+})();
+
+/* 2. CURSOR */
+const cD=document.getElementById('cDot'),cR=document.getElementById('cRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cD.style.left=mx+'px';cD.style.top=my+'px'});
+document.addEventListener('mousedown',()=>{cD.classList.add('ck');cR.classList.add('ck')});
+document.addEventListener('mouseup',()=>{cD.classList.remove('ck');cR.classList.remove('ck')});
+(function tickC(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cR.style.left=rx+'px';cR.style.top=ry+'px';requestAnimationFrame(tickC)})();
+function ah(sel,c='hv'){document.querySelectorAll(sel).forEach(el=>{el.addEventListener('mouseenter',()=>{cD.classList.add(c);cR.classList.add(c)});el.addEventListener('mouseleave',()=>{cD.classList.remove(c);cR.classList.remove(c)})})}
+ah('a,button,.sc2,.pc,.tcc,.tg,.fb,.sol,.ob,.mc,.bkt,.hbg,.ec,.cit');
+ah('input,textarea','tx');
+
+/* 3. SCROLL PROGRESS + NAV */
+window.addEventListener('scroll',()=>{
+  const p=scrollY/(document.documentElement.scrollHeight-innerHeight)*100;
+  document.getElementById('pb').style.width=p+'%';
+  document.getElementById('nav').classList.toggle('sc',scrollY>60);
+  document.querySelectorAll('section[id]').forEach(s=>{const t=s.offsetTop-100,b=t+s.offsetHeight;if(scrollY>=t&&scrollY<b)document.querySelectorAll('.navl a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+s.id))});
+});
+
+/* 4. MOBILE MENU */
+function tM(){const m=document.getElementById('mm'),h=document.getElementById('hbg');m.classList.toggle('op');h.classList.toggle('op')}
+function cM(){document.getElementById('mm').classList.remove('op');document.getElementById('hbg').classList.remove('op')}
+
+/* 5. TYPED TEXT */
+const phs=['Flutter Developer','Mobile App Developer','AI/ML Enthusiast','Full Stack Developer','UI/UX Designer'];
+let pi=0,ci=0,dl=false;
+const tEl=document.getElementById('tEl');
+function type(){const p=phs[pi];if(!dl){tEl.textContent=p.slice(0,++ci);if(ci===p.length){dl=true;setTimeout(type,2000);return}}else{tEl.textContent=p.slice(0,--ci);if(ci===0){dl=false;pi=(pi+1)%phs.length}}setTimeout(type,dl?52:80)}
+type();
+
+/* 6. SCROLL REVEAL */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const d=parseFloat(e.target.dataset.d)||0;setTimeout(()=>e.target.classList.add('vi'),d)}})},{threshold:.1});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach((el,i)=>{el.dataset.d=Math.min(i%6*65,340);ro.observe(el)});
+
+/* 7. COUNTERS */
+const co=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.t,dur=1500;let s=null;const step=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/dur,1),ez=1-Math.pow(1-p,3);e.target.textContent=Math.round(ez*t);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);co.unobserve(e.target)}})},{threshold:.5});
+document.querySelectorAll('.ctr').forEach(el=>co.observe(el));
+
+/* 8. SKILL BARS */
+const sbo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sbf').forEach((b,i)=>setTimeout(()=>{b.style.width=b.dataset.w+'%'},i*150));sbo.unobserve(e.target)}})},{threshold:.3});
+document.querySelectorAll('#sbw').forEach(el=>sbo.observe(el));
+
+/* 9. SPOTLIGHT on cards */
+document.querySelectorAll('.sc2,.ec').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')})});
+
+/* 10. 3D TILT HERO */
+const hCard=document.getElementById('hCard');
+if(hCard){hCard.parentElement.addEventListener('mousemove',e=>{const r=hCard.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;hCard.style.transform=`perspective(760px) rotateX(${((e.clientY-cy)/r.height)*16}deg) rotateY(${((e.clientX-cx)/r.width)*-16}deg) scale(1.04)`});hCard.parentElement.addEventListener('mouseleave',()=>{hCard.style.transform='perspective(760px) rotateX(0) rotateY(0) scale(1)'})}
+
+/* 11. RIPPLE */
+document.querySelectorAll('.btp,.bto').forEach(b=>{b.addEventListener('click',e=>{const r=b.getBoundingClientRect(),rp=document.createElement('span'),sz=Math.max(r.width,r.height)*2;rp.className='rpl';rp.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px`;b.appendChild(rp);setTimeout(()=>rp.remove(),630)})});
+
+/* 12. MAGNETIC BUTTONS */
+document.querySelectorAll('.mb').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>{b.style.transform='translate(0,0)'})});
+
+/* 13. PROJECT FILTER */
+document.querySelectorAll('.fb').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));btn.classList.add('act');const f=btn.dataset.f;document.querySelectorAll('.pc').forEach(c=>{const show=f==='all'||(c.dataset.cat||'').includes(f);if(show){c.classList.remove('hd');c.style.animation='none';requestAnimationFrame(()=>{c.style.animation='pi .38s forwards'})}else{c.style.opacity='0';c.style.transform='scale(.93)';setTimeout(()=>c.classList.add('hd'),310)}})})});
+
+/* 14. PROJECT MODAL */
+function oM(card){document.getElementById('mImg').src=card.dataset.img||'';document.getElementById('mTag').textContent=card.dataset.tag||'';document.getElementById('mTtl').textContent=card.dataset.title||'';document.getElementById('mDsc').textContent=card.dataset.desc||'';document.getElementById('mTcs').innerHTML=(card.dataset.techs||'').split(',').map(t=>`<span class="mtech">${t.trim()}</span>`).join('');document.getElementById('pModal').classList.add('op');document.body.style.overflow='hidden'}
+document.getElementById('mCls').addEventListener('click',cMod);
+document.getElementById('pModal').addEventListener('click',e=>{if(e.target===document.getElementById('pModal'))cMod()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')cMod()});
+function cMod(){document.getElementById('pModal').classList.remove('op');document.body.style.overflow=''}
+
+/* 15. CHAR COUNTER */
+const msEl=document.getElementById('ms'),ccEl=document.getElementById('cc');
+msEl.addEventListener('input',()=>{const n=msEl.value.length;ccEl.textContent=`${n} / 2000`;ccEl.className='cc'+(n>1800?' wn':'')+(n>=2000?' ov':'')});
+
+/* 16. TOAST */
+let tTimer;
+function showToast(msg,type='inf'){const t=document.getElementById('toast');t.className=`toast ${type}`;const icons={ok:'fa-check-circle',err:'fa-exclamation-circle',inf:'fa-info-circle'};t.innerHTML=`<i class="fas ${icons[type]}"></i> ${msg}`;t.classList.add('show');clearTimeout(tTimer);tTimer=setTimeout(()=>t.classList.remove('show'),4500)}
+
+
+/* 18. INPUT LABEL ANIMATION */
+document.querySelectorAll('.fg input,.fg textarea').forEach(inp=>{inp.addEventListener('focus',()=>{const l=inp.parentElement.querySelector('label');if(l)l.style.color='var(--accent)'});inp.addEventListener('blur',()=>{const l=inp.parentElement.querySelector('label');if(l)l.style.color=''})});
+</script>
 </body>
-
-
 </html>
-
-
-
-
-
-
-
-
-
