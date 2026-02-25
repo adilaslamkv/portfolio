@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Adil Aslam K V | Flutter & Full Stack Developer</title>
+<title>ADIL ASLAM K V | Mobile Application Developer / Flutter Developer</title>
+<link rel="icon" type="image/x-icon" href="image/flutter.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <style>
 :root{--bg:#050810;--bg2:#080d1a;--surface:rgba(255,255,255,.04);--surface2:rgba(255,255,255,.07);--border:rgba(255,255,255,.08);--accent:#00d4ff;--accent2:#7c3aed;--accent3:#10b981;--text:#e8eaf6;--muted:#6b7280;--heading:#fff;--cr:20px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -38,8 +38,8 @@ nav{position:fixed;top:0;width:100%;z-index:200;padding:20px 60px;display:flex;j
 nav.sc{padding:12px 60px;background:rgba(5,8,16,.94)}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--heading);text-decoration:none;letter-spacing:-.5px}
 .logo span{color:var(--accent)}.logo::after{display:none}
-.navl{display:flex;gap:32px;list-style:none}
-.navl a{color:var(--muted);text-decoration:none;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:4px}
+.navl{display:flex;gap:26px;list-style:none}
+.navl a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:4px}
 .navl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
 .navl a:hover,.navl a.act{color:#fff}.navl a:hover::after,.navl a.act::after{width:100%}
 .hbg{display:none;flex-direction:column;gap:5px;cursor:none;z-index:201}
@@ -47,11 +47,11 @@ nav.sc{padding:12px 60px;background:rgba(5,8,16,.94)}
 .hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hbg.op span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mmenu{display:none;position:fixed;inset:0;background:rgba(5,8,16,.98);backdrop-filter:blur(28px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.mmenu{display:none;position:fixed;inset:0;background:rgba(5,8,16,.98);backdrop-filter:blur(28px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:18px}
 .mmenu.op{display:flex}
-.mmenu a{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:800;color:var(--heading);text-decoration:none;opacity:0;transform:translateY(24px);transition:color .2s}
+.mmenu a{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--heading);text-decoration:none;opacity:0;transform:translateY(24px);transition:color .2s}
 .mmenu.op a{animation:su .4s forwards}.mmenu a:hover{color:var(--accent)}
-.mmenu.op a:nth-child(1){animation-delay:.04s}.mmenu.op a:nth-child(2){animation-delay:.09s}.mmenu.op a:nth-child(3){animation-delay:.13s}.mmenu.op a:nth-child(4){animation-delay:.17s}.mmenu.op a:nth-child(5){animation-delay:.21s}.mmenu.op a:nth-child(6){animation-delay:.25s}.mmenu.op a:nth-child(7){animation-delay:.29s}
+.mmenu.op a:nth-child(1){animation-delay:.04s}.mmenu.op a:nth-child(2){animation-delay:.08s}.mmenu.op a:nth-child(3){animation-delay:.12s}.mmenu.op a:nth-child(4){animation-delay:.16s}.mmenu.op a:nth-child(5){animation-delay:.20s}.mmenu.op a:nth-child(6){animation-delay:.24s}.mmenu.op a:nth-child(7){animation-delay:.28s}.mmenu.op a:nth-child(8){animation-delay:.32s}.mmenu.op a:nth-child(9){animation-delay:.36s}
 @keyframes su{to{opacity:1;transform:translateY(0)}}
 section{position:relative;z-index:1}
 .sw{max-width:1200px;margin:0 auto;padding:100px 60px}
@@ -68,6 +68,8 @@ section{position:relative;z-index:1}
 .bto:hover::after{transform:translateX(0)}.bto:hover{border-color:var(--accent);color:var(--accent)}
 .rpl{position:absolute;border-radius:50%;background:rgba(255,255,255,.26);transform:scale(0);animation:rp .58s linear;pointer-events:none}
 @keyframes rp{to{transform:scale(4.5);opacity:0}}
+
+/* ── HERO ── */
 #home{min-height:100vh;display:flex;align-items:center;padding:120px 60px 80px}
 .hi{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 400px;gap:70px;align-items:center}
 .hb{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:100px;padding:6px 16px;font-size:.74rem;color:var(--accent);letter-spacing:.09em;text-transform:uppercase;margin-bottom:26px;animation:fd .6s .15s both}
@@ -100,6 +102,8 @@ section{position:relative;z-index:1}
 .fc2{top:28px;right:-48px;animation:fl 3.2s ease-in-out 1.6s infinite}
 .fc3{top:50%;left:-54px;margin-top:-20px;animation:fl 3.2s ease-in-out .8s infinite}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ── ABOUT ── */
 #about .sw{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
 .aib{width:100%;border-radius:22px;overflow:hidden;border:1px solid var(--border);aspect-ratio:4/5;background:var(--surface);position:relative}
 .aib img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(15%);transition:filter .4s,transform .5s;display:block}
@@ -112,13 +116,16 @@ section{position:relative;z-index:1}
 .atgs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 32px}
 .tg{padding:6px 15px;border-radius:100px;border:1px solid var(--border);font-size:.78rem;color:var(--muted);background:var(--surface);transition:all .25s;cursor:default;user-select:none}
 .tg:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.08);transform:translateY(-2px)}
-/* EXPERIENCE */
+
+/* ── TIMELINE (shared by Experience & Education) ── */
 #experience{background:var(--bg2)}
+#education{background:var(--bg)}
 .etl{position:relative;padding-left:40px}
 .etl::before{content:'';position:absolute;left:12px;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent) 0%,var(--accent2) 60%,transparent 100%)}
 .ei{position:relative;padding:0 0 50px 36px}
 .ei:last-child{padding-bottom:0}
 .edot{position:absolute;left:-29px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg2);border:2px solid var(--accent);transition:all .3s;z-index:2}
+#education .edot{background:var(--bg)}
 .edot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--accent);transform:scale(0);transition:transform .3s}
 .ei:hover .edot{box-shadow:0 0 0 6px rgba(0,212,255,.15)}
 .ei:hover .edot::after{transform:scale(1)}
@@ -135,7 +142,8 @@ section{position:relative;z-index:1}
 .edd{color:var(--muted);font-size:.88rem;line-height:1.75;margin-bottom:16px}
 .etgs{display:flex;flex-wrap:wrap;gap:7px}
 .etg{padding:4px 11px;border-radius:100px;border:1px solid var(--border);font-size:.73rem;color:var(--muted);background:var(--surface)}
-/* SERVICES */
+
+/* ── SERVICES ── */
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .sc2{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);padding:36px 30px;transition:transform .3s,border-color .3s,background .3s;cursor:default;position:relative;overflow:hidden}
 .sc2::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
@@ -146,7 +154,8 @@ section{position:relative;z-index:1}
 .sc2:hover .sic{transform:scale(1.14) rotate(-7deg)}
 .sc2 h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--heading);margin-bottom:12px}
 .sc2 p{color:var(--muted);font-size:.87rem;line-height:1.75}
-/* SKILLS */
+
+/* ── SKILLS — unified chip design ── */
 .sklg{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .skc h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--heading);margin-bottom:32px}
 .tcs{display:flex;flex-wrap:wrap;gap:10px}
@@ -155,19 +164,18 @@ section{position:relative;z-index:1}
 .tcc:hover::before{transform:scale(1)}
 .tcc:hover{border-color:var(--accent);transform:translateY(-3px) scale(1.04);box-shadow:0 7px 22px rgba(0,212,255,.15)}
 .tcc i{color:var(--accent);font-size:1rem;transition:transform .3s;position:relative;z-index:1}
-.tcc:hover i{transform:rotate(-12deg) scale(1.22)}.tcc span{position:relative;z-index:1}
-.sbi{margin-bottom:26px}
-.sbh{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
-.sbh span{font-size:.85rem;color:var(--text)}.sbh .pct{color:var(--accent);font-weight:600;font-size:.8rem}
-.sbt{height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
-.sbf{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent2),var(--accent));width:0;transition:width 1.4s cubic-bezier(.25,1,.5,1)}
-/* PROJECTS */
+.tcc:hover i{transform:rotate(-12deg) scale(1.22)}
+.tcc span{position:relative;z-index:1}
+/* % badge on professional skill chips */
+.pbadge{margin-left:6px;font-size:.69rem;font-weight:600;color:var(--accent);background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);border-radius:100px;padding:2px 8px;position:relative;z-index:1;white-space:nowrap}
+
+/* ── PROJECTS ── */
 .pfl{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap}
 .fb{padding:8px 20px;border-radius:100px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.8rem;cursor:none;transition:all .25s;font-family:'DM Sans',sans-serif;letter-spacing:.04em}
 .fb:hover,.fb.act{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.09)}
 .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .pc{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s;cursor:none;position:relative}
-.pc.hd{display:none}.pc.fo{opacity:0;transform:scale(.93) translateY(8px)}.pc.fi{animation:pi .38s forwards}
+.pc.hd{display:none}.pc.fi{animation:pi .38s forwards}
 @keyframes pi{from{opacity:0;transform:scale(.93) translateY(8px)}to{opacity:1;transform:none}}
 .pc:hover{border-color:rgba(0,212,255,.28);transform:translateY(-9px) scale(1.015);box-shadow:0 28px 70px rgba(0,0,0,.55)}
 .piw{position:relative;overflow:hidden;height:185px}
@@ -192,7 +200,62 @@ section{position:relative;z-index:1}
 .mdc{color:var(--muted);line-height:1.82;font-size:.92rem;margin-bottom:22px}
 .mts{display:flex;flex-wrap:wrap;gap:8px}
 .mtech{padding:5px 13px;border-radius:100px;border:1px solid var(--border);font-size:.74rem;color:var(--muted);background:var(--surface)}
-/* CONTACT */
+
+/* ── CERT MODAL ── */
+.cmov{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(12px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.cmov.op{opacity:1;pointer-events:all}
+.cmb{background:#080d1a;border:1px solid rgba(255,255,255,.09);border-radius:26px;max-width:560px;width:92%;max-height:90vh;overflow-y:auto;position:relative;transform:scale(.86) translateY(28px);transition:transform .4s cubic-bezier(.34,1.56,.64,1);scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.cmov.op .cmb{transform:scale(1) translateY(0)}
+.cmc{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.55);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#fff;cursor:none;transition:all .25s;z-index:10}
+.cmc:hover{background:rgba(255,60,60,.2);border-color:rgba(255,60,60,.4);color:#ff4545;transform:rotate(90deg) scale(1.08)}
+.cmimg-wrap{position:relative;width:100%;background:var(--bg);border-radius:26px 26px 0 0;overflow:hidden;min-height:200px;display:flex;align-items:center;justify-content:center}
+.cmimg{width:100%;display:block;border-radius:26px 26px 0 0;object-fit:contain;max-height:320px}
+.cmimg-placeholder{width:100%;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(135deg,rgba(0,212,255,.04),rgba(124,58,237,.07))}
+.cmimg-placeholder .bigico{font-size:3.5rem;opacity:.4}
+.cmimg-placeholder span{font-size:.75rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.cmimg-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(to top,#080d1a,transparent);pointer-events:none}
+.cmbody{padding:28px 34px 34px}
+.cm-top-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.cmttl{font-family:'Syne',sans-serif;font-size:1.45rem;font-weight:800;color:var(--heading);margin-bottom:10px;line-height:1.25}
+.cm-meta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:18px}
+.cm-meta-item{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted)}
+.cm-meta-item i{color:var(--accent);font-size:.72rem}
+.cmdesc{color:var(--muted);line-height:1.8;font-size:.88rem;margin-bottom:20px}
+.cm-skills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.cm-skill{padding:5px 13px;border-radius:100px;border:1px solid var(--border);font-size:.73rem;color:var(--muted);background:var(--surface)}
+.cm-verify{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;background:var(--accent);color:#000;font-size:.83rem;font-weight:600;text-decoration:none;cursor:none;transition:all .3s;border:1.5px solid var(--accent);position:relative;overflow:hidden}
+.cm-verify::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.22);transform:translateX(-108%);transition:transform .4s cubic-bezier(.25,1,.5,1)}
+.cm-verify:hover::after{transform:translateX(0)}
+.cm-verify:hover{background:transparent;color:var(--accent);box-shadow:0 6px 24px rgba(0,212,255,.3)}
+/* hover overlay on cert cards */
+.ccard{cursor:none}
+.covl{position:absolute;inset:0;background:rgba(5,8,16,.75);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;border-radius:var(--cr)}
+.ccard:hover .covl{opacity:1}
+.covl-btn{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.09);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;transition:transform .28s,background .2s;transform:scale(.75);cursor:none}
+.ccard:hover .covl-btn{transform:scale(1)}
+.covl-btn:hover{background:var(--accent) !important;border-color:var(--accent) !important;color:#000 !important;transform:scale(1.14) !important}
+
+/* ── CERTIFICATIONS ── */
+#certifications{background:var(--bg2)}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ccard{background:var(--surface);border:1px solid var(--border);border-radius:var(--cr);padding:26px 24px;transition:all .35s;position:relative;overflow:hidden;cursor:default}
+.ccard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--accent),var(--accent3));opacity:0;transition:opacity .3s}
+.ccard::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(0,212,255,.07) 0%,transparent 65%);opacity:0;transition:opacity .4s}
+.ccard:hover{border-color:rgba(0,212,255,.25);transform:translateY(-6px);background:var(--surface2)}
+.ccard:hover::before,.ccard:hover::after{opacity:1}
+.ccard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.cicon{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--accent);border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.08);transition:transform .3s;flex-shrink:0}
+.ccard:hover .cicon{transform:scale(1.12) rotate(-6deg)}
+.cbadge{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:4px 11px;border-radius:100px}
+.cbadge.blue{border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.08);color:var(--accent)}
+.cbadge.purple{border:1px solid rgba(124,58,237,.25);background:rgba(124,58,237,.1);color:#a78bfa}
+.cbadge.green{border:1px solid rgba(16,185,129,.25);background:rgba(16,185,129,.1);color:var(--accent3)}
+.cbadge.orange{border:1px solid rgba(251,146,60,.25);background:rgba(251,146,60,.08);color:#fb923c}
+.cname{font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:var(--heading);margin-bottom:8px;line-height:1.35}
+.cissuer{font-size:.82rem;color:var(--accent3);font-weight:500;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.cdate{font-size:.76rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+
+/* ── CONTACT ── */
 .ci{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .cih h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--heading);margin-bottom:16px}
 .cih>p{color:var(--muted);line-height:1.8;margin-bottom:36px;font-size:.95rem}
@@ -217,11 +280,6 @@ section{position:relative;z-index:1}
 .cc{position:absolute;bottom:12px;right:14px;font-size:.72rem;color:var(--muted);pointer-events:none}
 .cc.wn{color:orange}.cc.ov{color:#ff5050}
 #sb{position:relative;min-width:170px;justify-content:center}
-.sp{display:none;width:16px;height:16px;border:2px solid rgba(0,0,0,.3);border-top-color:#000;border-radius:50%;animation:spin .7s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.snote{background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.2);border-radius:14px;padding:18px 20px;margin-bottom:20px;font-size:.83rem;color:var(--muted);line-height:1.75}
-.snote strong{color:var(--accent);display:block;margin-bottom:6px}
-.snote code{color:var(--accent3);background:rgba(0,0,0,.3);padding:1px 5px;border-radius:4px}
 footer{border-top:1px solid var(--border);padding:28px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
 footer p{color:var(--muted);font-size:.82rem}
 .bkt{display:flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-size:.82rem;cursor:none;border:1px solid var(--border);padding:8px 16px;border-radius:9px;transition:all .28s}
@@ -232,8 +290,9 @@ footer p{color:var(--muted);font-size:.82rem}
 .rvl.vi{opacity:1;transform:none}
 .rvr{opacity:0;transform:translateX(36px);transition:opacity .72s ease,transform .72s ease}
 .rvr.vi{opacity:1;transform:none}
-@media(max-width:1024px){.hi{grid-template-columns:1fr}.hiw{display:none}#about .sw{grid-template-columns:1fr}.aim{display:none}.sg{grid-template-columns:repeat(2,1fr)}.pg{grid-template-columns:repeat(2,1fr)}.sklg{grid-template-columns:1fr}.ci{grid-template-columns:1fr}}
-@media(max-width:768px){nav{padding:16px 22px}nav.sc{padding:12px 22px}.navl{display:none}.hbg{display:flex}.sw{padding:68px 22px}.sg,.pg{grid-template-columns:1fr}#home{padding:100px 22px 60px}footer{flex-direction:column;gap:12px;text-align:center;padding:22px}.hs{gap:22px}.div{margin:0 22px}.frow{grid-template-columns:1fr}.etl{padding-left:24px}.edot{left:-17px}}
+
+@media(max-width:1024px){.hi{grid-template-columns:1fr}.hiw{display:none}#about .sw{grid-template-columns:1fr}.aim{display:none}.sg{grid-template-columns:repeat(2,1fr)}.pg{grid-template-columns:repeat(2,1fr)}.sklg{grid-template-columns:1fr}.ci{grid-template-columns:1fr}.cert-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:16px 22px}nav.sc{padding:12px 22px}.navl{display:none}.hbg{display:flex}.sw{padding:68px 22px}.sg,.pg,.cert-grid{grid-template-columns:1fr}#home{padding:100px 22px 60px}footer{flex-direction:column;gap:12px;text-align:center;padding:22px}.hs{gap:22px}.div{margin:0 22px}.frow{grid-template-columns:1fr}.etl{padding-left:24px}.edot{left:-17px}}
 </style>
 </head>
 <body>
@@ -243,33 +302,78 @@ footer p{color:var(--muted);font-size:.82rem}
 <canvas id="pCanvas"></canvas>
 <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 <div class="toast" id="toast"></div>
+
+<!-- Mobile menu -->
 <div class="mmenu" id="mm">
-  <a href="#home"       onclick="cM()">Home</a>
-  <a href="#about"      onclick="cM()">About</a>
-  <a href="#experience" onclick="cM()">Experience</a>
-  <a href="#services"   onclick="cM()">Services</a>
-  <a href="#skills"     onclick="cM()">Skills</a>
-  <a href="#projects"   onclick="cM()">Projects</a>
-  <a href="#contact"    onclick="cM()">Contact</a>
+  <a href="#home"           onclick="cM()">Home</a>
+  <a href="#about"          onclick="cM()">About</a>
+  <a href="#experience"     onclick="cM()">Experience</a>
+  <a href="#education"      onclick="cM()">Education</a>
+  <a href="#services"       onclick="cM()">Services</a>
+  <a href="#skills"         onclick="cM()">Skills</a>
+  <a href="#projects"       onclick="cM()">Projects</a>
+  <a href="#certifications" onclick="cM()">Certifications</a>
+  <a href="#contact"        onclick="cM()">Contact</a>
 </div>
-<div class="mov" id="pModal"><div class="mb2"><div class="mc" id="mCls"><i class="fas fa-times"></i></div><img class="mim" id="mImg" src="" alt=""/><div class="mtag" id="mTag"></div><h2 class="mttl" id="mTtl"></h2><p class="mdc" id="mDsc"></p><div class="mts" id="mTcs"></div></div></div>
+
+<!-- Modal -->
+<div class="mov" id="pModal">
+  <div class="mb2">
+    <div class="mc" id="mCls"><i class="fas fa-times"></i></div>
+    <img class="mim" id="mImg" src="" alt=""/>
+    <div class="mtag" id="mTag"></div>
+    <h2 class="mttl" id="mTtl"></h2>
+    <p class="mdc" id="mDsc"></p>
+    <div class="mts" id="mTcs"></div>
+  </div>
+</div>
+
+<!-- Cert Modal -->
+<div class="cmov" id="certModal">
+  <div class="cmb">
+    <div class="cmc" id="certClose"><i class="fas fa-times"></i></div>
+    <div class="cmimg-wrap" id="certImgWrap"></div>
+    <div class="cmbody">
+      <div class="cm-top-row" id="certTopRow"></div>
+      <h2 class="cmttl" id="certTitle"></h2>
+      <div class="cm-meta" id="certMeta"></div>
+      <p class="cmdesc" id="certDesc"></p>
+      <div class="cm-skills" id="certSkills"></div>
+      <a href="#" class="cm-verify" id="certVerify" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
 <nav id="nav">
-  <a href="#home" class="logo">ADIL ASLAM K V<span></span></a>
+  <a href="#home" class="logo">ADIL ASLAM K <span>V</span></a>
   <ul class="navl" id="navl">
-    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li><li><a href="#services">Services</a></li>
-    <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="hbg" id="hbg" onclick="tM()"><span></span><span></span><span></span></div>
 </nav>
+
+<!-- ═══════════════════════════════════
+     HERO
+════════════════════════════════════ -->
 <section id="home">
   <div class="hi">
     <div>
-      <div class="hb"><span class="bd"></span>Available for opportunities</div>
-      <h1 class="ht">ADIL<br><span class="gt">ASLAM<br> K V</span></h1>
+      <div class="hb"><span class="bd"></span>Open to new opportunities</div>
+      <h1 class="ht">ADIL<br><span class="gt">ASLAM<br>K V</span></h1>
       <div class="tw"><span id="tEl"></span><span class="tc">|</span></div>
-      <p class="hd">Passionate Flutter &amp; Full Stack Developer building high-quality, responsive, and user-centric applications. Currently working as a Flutter Developer Intern in Thiruvananthapuram, integrating ML capabilities into production mobile apps.</p>
+
+      <!-- UPDATE 1 · Hero description -->
+      <p class="hd">Flutter &amp; Mobile App Developer with hands-on experience building production-grade, cross-platform Android and iOS applications integrated with AI/ML capabilities. Skilled in full-stack web development, REST API design, and Firebase — passionate about turning complex ideas into clean, high-performance user experiences.</p>
+
       <div class="hca">
         <a href="#projects" class="btp mb"><i class="fas fa-eye"></i> View Projects</a>
         <a href="#contact"  class="bto mb"><i class="fas fa-paper-plane"></i> Let's Talk</a>
@@ -285,145 +389,474 @@ footer p{color:var(--muted);font-size:.82rem}
       <div class="hic" id="hCard"><img src="image/Adil1.jpg" alt="Adil Aslam KV"/></div>
       <div class="fc fc1"><span>🚀</span> Flutter Developer</div>
       <div class="fc fc2"><span>🤖</span> AI/ML Integration</div>
-      <div class="fc fc3"><span>🎓</span> M.Sc. Graduate</div>
+      <div class="fc fc3"><span>🎓</span> MSc. Graduate</div>
     </div>
   </div>
 </section>
 <div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     ABOUT
+════════════════════════════════════ -->
 <section id="about">
   <div class="sw">
     <div class="aim rvl">
       <div class="aib"><img src="image/adil.PNG" alt="Adil"/></div>
       <div class="afc"><div class="bn"><span class="ctr" data-t="1">0</span>+</div><p>Year professional exp.</p></div>
     </div>
+
+    <!-- UPDATE 2 · About content -->
     <div class="act">
       <div class="sl rv">About Me</div>
-      <h2 class="st rv">Crafting Digital<br>Experiences</h2>
-      <p class="rv">I'm a skilled Full Stack Developer with strong expertise in dynamic web and mobile applications. Hands-on experience in both frontend and backend technologies — building efficient, secure, scalable solutions.</p>
-      <p class="rv">Passionate about integrating machine learning into real-world apps — enabling intelligent features like content summarization, spam detection, and smart reply suggestions.</p>
-      <p class="rv">Having completed my Master's in September 2025, I continue exploring hybrid frameworks and emerging technologies to create smarter, data-driven digital solutions.</p>
-      <div class="atgs rv"><span class="tg">Flutter</span><span class="tg">Full Stack</span><span class="tg">ML Integration</span><span class="tg">PHP &amp; MySQL</span><span class="tg">API Design</span><span class="tg">UI/UX</span><span class="tg">Python</span><span class="tg">JavaScript</span></div>
+      <h2 class="st rv">Building Impactful<br>Mobile Experiences</h2>
+      <p class="rv">I'm Adil Aslam K V, a Flutter &amp; Mobile App Developer based in Thiruvananthapuram, Kerala. Currently working as a Mobile Application Developer at Creative App Lab, I specialise in crafting robust cross-platform Android and iOS apps using Flutter — from UI/UX design all the way through to production deployment on the Play Store and App Store.</p>
+      <p class="rv">My passion lives at the intersection of mobile development and artificial intelligence. I integrate ML capabilities directly into Flutter apps — intelligent email spam detection, context-aware auto-reply suggestions, content summarisation, and real-time hate speech filtering — turning smart models into features real users love.</p>
+      <p class="rv">I hold an M.Sc. in Computer Science (2025) with research focused on NLP-driven cyberbullying detection in low-resource languages. I believe in clean architecture, continuous learning, and shipping products that genuinely solve problems.</p>
+      <div class="atgs rv">
+        <span class="tg">Flutter</span><span class="tg">Dart</span><span class="tg">Mobile Dev</span>
+        <span class="tg">AI/ML Integration</span><span class="tg">Firebase</span><span class="tg">Full Stack</span>
+        <span class="tg">PHP &amp; MySQL</span><span class="tg">REST APIs</span><span class="tg">Python</span><span class="tg">NLP</span>
+      </div>
       <a href="image/adil_new_cv.pdf" class="btp mb rv" style="width:fit-content"><i class="fas fa-file-alt"></i> Download CV</a>
     </div>
   </div>
 </section>
 <div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     EXPERIENCE  (UPDATE 3)
+════════════════════════════════════ -->
 <section id="experience">
   <div class="sw">
-    <div class="rv" style="margin-bottom:60px"><div class="sl">Career Path</div><h2 class="st">My Experience</h2><p class="sd">A timeline of my professional journey, internships, and academic milestones.</p></div>
+    <div class="rv" style="margin-bottom:60px">
+      <div class="sl">Work History</div>
+      <h2 class="st">My Experience</h2>
+      <p class="sd">Professional roles that shaped my expertise as a developer.</p>
+    </div>
     <div class="etl">
+
+      <!-- EXP 1 -->
       <div class="ei rv"><div class="edot"></div><div class="ec">
-        <div class="ehd"><div class="er">Mobile Application Developer</div><span class="ep">Aug 2025 – Present</span></div>
+        <div class="ehd">
+          <div class="er">Mobile Application Developer</div>
+          <span class="ep">Aug 2025 – Present</span>
+        </div>
         <div class="eco"><i class="fas fa-building"></i> Creative App Lab</div>
         <div class="elo"><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</div>
-        <p class="edd">Developing cross-platform mobile applications using Flutter with integrated machine learning capabilities. Building email spam detection modules, automatic reply suggestion systems, content summarization APIs, and hate speech detection features. Collaborating with backend teams to design and consume RESTful APIs efficiently.</p>
-        <div class="etgs"><span class="etg">Flutter</span><span class="etg">Dart</span><span class="etg">ML Integration</span><span class="etg">Python</span><span class="etg">REST APIs</span><span class="etg">Firebase</span></div>
+        <p class="edd">Building and maintaining production-grade cross-platform mobile applications for Android and iOS using Flutter. Responsibilities span architecting scalable app structures, integrating ML-powered features (spam detection, smart reply, content summarisation, hate speech filtering), consuming and designing RESTful APIs, managing Firebase backends, and conducting code reviews. Collaborate closely with designers and backend engineers in an agile team environment to deliver high-quality releases on schedule.</p>
+        <div class="etgs">
+          <span class="etg">Flutter</span><span class="etg">Dart</span><span class="etg">Firebase</span>
+          <span class="etg">ML Integration</span><span class="etg">REST APIs</span><span class="etg">Android</span><span class="etg">iOS</span>
+        </div>
       </div></div>
+
+      <!-- EXP 2 -->
       <div class="ei rv"><div class="edot"></div><div class="ec">
-        <div class="ehd"><div class="er">Flutter Developer Intern</div><span class="ep">Mar 2025 – Aug 2025</span></div>
-        <div class="eco"><i class="fas fa-laptop-code"></i> Creative App Lab </div>
+        <div class="ehd">
+          <div class="er">Flutter Developer Intern</div>
+          <span class="ep">Mar 2025 – Aug 2025</span>
+        </div>
+        <div class="eco"><i class="fas fa-laptop-code"></i> Creative App Lab</div>
         <div class="elo"><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</div>
-        <p class="edd">Designed and developed multiple web and mobile applications for various clients. Built PHP/MySQL backends with secure authentication and responsive frontends. Created real estate platforms, job listing portals, and custom business applications with clean UI/UX and optimized database architecture.</p>
-        <div class="etgs"><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">JavaScript</span><span class="etg">HTML/CSS</span><span class="etg">Flutter</span><span class="etg">UI/UX</span></div>
+        <p class="edd">Joined Creative App Lab as an intern during my final M.Sc. semester. Contributed to building UI components, integrating third-party SDKs, and supporting feature development across multiple live projects. Gained hands-on experience with the complete Flutter development cycle — from design handoff through state management, responsive layouts, Firebase integration, to Google Play submission.</p>
+        <div class="etgs">
+          <span class="etg">Flutter</span><span class="etg">Dart</span><span class="etg">Firebase</span>
+          <span class="etg">State Management</span><span class="etg">UI Development</span><span class="etg">Google Play</span>
+        </div>
       </div></div>
- <div class="ei rv"><div class="edot"></div><div class="ec">
-        <div class="ehd"><div class="er">Flutter Developer Intern</div><span class="ep">Aug 2022 – Jan 2023</span></div>
+
+      <!-- EXP 3 -->
+      <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd">
+          <div class="er">Flutter Developer Intern</div>
+          <span class="ep">Aug 2022 – Jan 2023</span>
+        </div>
         <div class="eco"><i class="fas fa-laptop-code"></i> Foxfennecs Technologies LLP</div>
         <div class="elo"><i class="fas fa-map-marker-alt"></i> Kozhikode, Kerala, India</div>
-        <p class="edd">Designed and developed multiple web and mobile applications for various clients. Built PHP/MySQL backends with secure authentication and responsive frontends. Created real estate platforms, job listing portals, and custom business applications with clean UI/UX and optimized database architecture.</p>
-        <div class="etgs"><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">JavaScript</span><span class="etg">HTML/CSS</span><span class="etg">Flutter</span><span class="etg">UI/UX</span></div>
+        <p class="edd">First professional internship focused on mobile and web development. Contributed to building Flutter-based cross-platform applications and PHP/MySQL web portals including a real estate listing platform and a job board system. Developed core competencies in responsive UI design, backend API consumption, and database management. Collaborated with senior developers on client-facing deliverables in a fast-paced agency setting.</p>
+        <div class="etgs">
+          <span class="etg">Flutter</span><span class="etg">Dart</span><span class="etg">PHP</span>
+          <span class="etg">MySQL</span><span class="etg">HTML/CSS</span><span class="etg">JavaScript</span><span class="etg">UI/UX</span>
+        </div>
       </div></div>
-      
+
     </div>
   </div>
 </section>
+<div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     EDUCATION  (UPDATE 4)
+════════════════════════════════════ -->
 <section id="education">
   <div class="sw">
-    <div class="rv" style="margin-bottom:60px"><div class="sl">Career Path</div><h2 class="st">My Educational Qualifications </h2><p class="sd">A timeline of my academic milestones.</p></div>
+    <div class="rv" style="margin-bottom:60px">
+      <div class="sl">Academic Background</div>
+      <h2 class="st">My Education</h2>
+      <p class="sd">The academic foundations that underpin my technical expertise.</p>
+    </div>
     <div class="etl">
-<div class="ei rv"><div class="edot"></div><div class="ec">
-        <div class="ehd"><div class="er">M.Sc. Computer Science</div><span class="ep">2023 – 2025</span></div>
-        <div class="eco"><i class="fas fa-graduation-cap"></i> University — Kerala, India</div>
-        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kerala, India</div>
-        <p class="edd">Master's degree in Computer Science with focus on Machine Learning, NLP, and Mobile App Development. Final year project: Cyberbullying Detection for Low-Resource Languages — using NLP and ML techniques to analyze social media content and flag harmful interactions. Graduated September 2025.</p>
-        <div class="etgs"><span class="etg">Machine Learning</span><span class="etg">NLP</span><span class="etg">Python</span><span class="etg">Research</span><span class="etg">Data Science</span><span class="etg">Deep Learning</span></div>
-      </div></div>
+
+      <!-- EDU 1 -->
       <div class="ei rv"><div class="edot"></div><div class="ec">
-        <div class="ehd"><div class="er">B.Sc. Computer Science</div><span class="ep">2020 – 2023</span></div>
-        <div class="eco"><i class="fas fa-graduation-cap"></i> College — Kerala, India</div>
-        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kerala, India</div>
-        <p class="edd">Bachelor's degree in Computer Science. Built a strong foundation in programming, data structures, algorithms, web development, and database management. Developed academic projects using PHP, MySQL, HTML/CSS, and JavaScript. Active in coding competitions and tech fests.</p>
-        <div class="etgs"><span class="etg">C/C++</span><span class="etg">Java</span><span class="etg">PHP</span><span class="etg">MySQL</span><span class="etg">Web Dev</span><span class="etg">DSA</span></div>
+        <div class="ehd">
+          <div class="er">M.Sc. Computer Science</div>
+          <span class="ep">2023 – 2025</span>
+        </div>
+        <div class="eco"><i class="fas fa-graduation-cap"></i> University of Kerala</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</div>
+        <p class="edd">Master of Science in Computer Science with specialisation in Machine Learning and Natural Language Processing. Final year research project — <em style="color:var(--text);font-style:normal;font-weight:500">"Cyberbullying Detection for Low-Resource Languages"</em> — applied transformer-based NLP models (mBERT, IndicBERT) and classical ML techniques to identify harmful Malayalam social media content, achieving strong detection accuracy on a custom-labelled dataset. Graduated September 2025.</p>
+        <div class="etgs">
+          <span class="etg">Machine Learning</span><span class="etg">NLP</span><span class="etg">Python</span>
+          <span class="etg">Deep Learning</span><span class="etg">Transformers</span><span class="etg">Data Science</span><span class="etg">Research</span>
+        </div>
       </div></div>
-  </div>
-  </div>
 
+      <!-- EDU 2 -->
+      <div class="ei rv"><div class="edot"></div><div class="ec">
+        <div class="ehd">
+          <div class="er">B.Sc. Computer Science</div>
+          <span class="ep">2020 – 2023</span>
+        </div>
+        <div class="eco"><i class="fas fa-graduation-cap"></i> Govt. College, University of Kerala</div>
+        <div class="elo"><i class="fas fa-map-marker-alt"></i> Kerala, India</div>
+        <p class="edd">Bachelor of Science in Computer Science covering core programming fundamentals, data structures &amp; algorithms, relational databases, operating systems, and web technologies. Developed full-stack academic projects using PHP, MySQL, HTML/CSS, and JavaScript. Actively participated in coding competitions, tech fests, and department seminars. This degree laid the strong foundation on which my professional career and postgraduate research were built.</p>
+        <div class="etgs">
+          <span class="etg">C / C++</span><span class="etg">Java</span><span class="etg">PHP</span>
+          <span class="etg">MySQL</span><span class="etg">DSA</span><span class="etg">Web Development</span><span class="etg">Networking</span>
+        </div>
+      </div></div>
 
-<div class="div"></div>
-<section id="services" style="background:var(--bg2)">
-  <div class="sw">
-    <div class="rv" style="text-align:center;margin-bottom:60px"><div class="sl" style="justify-content:center">What I Do</div><h2 class="st">My Services</h2><p class="sd" style="margin:0 auto;text-align:center">I offer a wide range of development services to bring your digital ideas to life.</p></div>
-    <div class="sg">
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-code"></i></div><h3>Frontend Development</h3><p>Responsive and interactive UIs using HTML, CSS, JavaScript, and Flutter. Clean, efficient designs across web and mobile platforms.</p></div>
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-server"></i></div><h3>Backend Development</h3><p>Robust systems using PHP and MySQL. Efficient APIs, database management, and secure client-server communication.</p></div>
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-mobile-alt"></i></div><h3>Flutter App Development</h3><p>Cross-platform apps for Android and iOS — visually appealing, high-performance, with integrated ML features and smooth UX.</p></div>
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-brain"></i></div><h3>ML Integration</h3><p>Intelligent features: spam detection, auto reply, hate speech detection, and content summarization in production apps.</p></div>
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-palette"></i></div><h3>UI/UX Design</h3><p>Intuitive, modern interfaces with strong emphasis on usability, color theory, and visual appeal for seamless experiences.</p></div>
-      <div class="sc2 rv"><div class="sic"><i class="fas fa-plug"></i></div><h3>API Integration</h3><p>Connecting apps with RESTful APIs and third-party services. Smooth communication between frontend and backend systems.</p></div>
     </div>
   </div>
 </section>
 <div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     SERVICES
+════════════════════════════════════ -->
+<section id="services" style="background:var(--bg2)">
+  <div class="sw">
+    <div class="rv" style="text-align:center;margin-bottom:60px">
+      <div class="sl" style="justify-content:center">What I Do</div>
+      <h2 class="st">My Services</h2>
+      <p class="sd" style="margin:0 auto;text-align:center">I offer a wide range of development services to bring your digital ideas to life.</p>
+    </div>
+    <div class="sg">
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-mobile-alt"></i></div><h3>Flutter App Development</h3><p>Cross-platform apps for Android and iOS — beautiful UIs, smooth animations, Firebase integration, and full Play Store / App Store deployment.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-brain"></i></div><h3>AI / ML Integration</h3><p>Embedding intelligence into apps: spam detection, smart auto-reply, content summarisation, hate speech filtering, and NLP-powered features in production.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-code"></i></div><h3>Frontend Development</h3><p>Responsive and interactive web UIs using HTML5, CSS3, and JavaScript. Pixel-perfect designs that perform across all screen sizes and browsers.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-server"></i></div><h3>Backend Development</h3><p>Robust PHP/MySQL backends with secure authentication, efficient query optimisation, and scalable database architecture for web and mobile apps.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-plug"></i></div><h3>API Design &amp; Integration</h3><p>Clean RESTful APIs and seamless third-party integrations — payment gateways, maps, push notifications, cloud storage, and more.</p></div>
+      <div class="sc2 rv"><div class="sic"><i class="fas fa-palette"></i></div><h3>UI / UX Design</h3><p>Intuitive, modern interfaces built with strong emphasis on usability, accessibility, and visual appeal for seamless digital experiences.</p></div>
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     SKILLS  (UPDATE 5 · Professional → same chip design)
+════════════════════════════════════ -->
 <section id="skills">
   <div class="sw">
     <div class="rv" style="margin-bottom:60px"><div class="sl">Expertise</div><h2 class="st">My Skills</h2></div>
     <div class="sklg">
-      <div><div class="rv"><div class="skc"><h3>Technical Stack</h3></div></div>
+
+      <!-- Technical Stack -->
+      <div>
+        <div class="rv"><div class="skc"><h3>Technical Stack</h3></div></div>
         <div class="tcs rv">
-          <div class="tcc"><i class="fab fa-html5"></i><span>HTML5</span></div><div class="tcc"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-          <div class="tcc"><i class="fab fa-js"></i><span>JavaScript</span></div><div class="tcc"><i class="fab fa-python"></i><span>Python</span></div>
-          <div class="tcc"><i class="fab fa-php"></i><span>PHP</span></div><div class="tcc"><i class="fas fa-database"></i><span>MySQL</span></div>
-          <div class="tcc"><i class="fas fa-mobile-alt" style="color:#54c5f8"></i><span>Flutter/Dart</span></div><div class="tcc"><i class="fas fa-robot"></i><span>Machine Learning</span></div>
-          <div class="tcc"><i class="fas fa-code-branch"></i><span>Git/GitHub</span></div><div class="tcc"><i class="fas fa-cloud"></i><span>REST APIs</span></div>
-          <div class="tcc"><i class="fas fa-fire"></i><span>Firebase</span></div><div class="tcc"><i class="fas fa-layer-group"></i><span>NLP</span></div>
+          <div class="tcc"><i class="fas fa-mobile-alt" style="color:#54c5f8"></i><span>Flutter / Dart</span></div>
+          <div class="tcc"><i class="fab fa-python"></i><span>Python</span></div>
+          <div class="tcc"><i class="fas fa-robot"></i><span>Machine Learning</span></div>
+          <div class="tcc"><i class="fas fa-layer-group"></i><span>NLP</span></div>
+          <div class="tcc"><i class="fab fa-php"></i><span>PHP</span></div>
+          <div class="tcc"><i class="fas fa-database"></i><span>MySQL</span></div>
+          <div class="tcc"><i class="fab fa-js"></i><span>JavaScript</span></div>
+          <div class="tcc"><i class="fab fa-html5"></i><span>HTML5</span></div>
+          <div class="tcc"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="tcc"><i class="fas fa-fire"></i><span>Firebase</span></div>
+          <div class="tcc"><i class="fas fa-cloud"></i><span>REST APIs</span></div>
+          <div class="tcc"><i class="fas fa-code-branch"></i><span>Git / GitHub</span></div>
         </div>
       </div>
-      <div><div class="rv"><div class="skc"><h3>Professional Skills</h3></div></div>
-        <div id="sbw" class="rv">
-          <div class="sbi"><div class="sbh"><span>Creativity</span><span class="pct">90%</span></div><div class="sbt"><div class="sbf" data-w="90"></div></div></div>
-          <div class="sbi"><div class="sbh"><span>Leadership</span><span class="pct">85%</span></div><div class="sbt"><div class="sbf" data-w="85"></div></div></div>
-          <div class="sbi"><div class="sbh"><span>Communication</span><span class="pct">80%</span></div><div class="sbt"><div class="sbf" data-w="80"></div></div></div>
-          <div class="sbi"><div class="sbh"><span>Teamwork</span><span class="pct">75%</span></div><div class="sbt"><div class="sbf" data-w="75"></div></div></div>
-          <div class="sbi"><div class="sbh"><span>Problem Solving</span><span class="pct">88%</span></div><div class="sbt"><div class="sbf" data-w="88"></div></div></div>
+
+      <!-- Professional Skills — chip design with % badge -->
+      <div>
+        <div class="rv"><div class="skc"><h3>Professional Skills</h3></div></div>
+        <div class="tcs rv">
+          <div class="tcc"><i class="fas fa-lightbulb"></i><span>Problem Solving</span></div>
+          <div class="tcc"><i class="fas fa-users"></i><span>Teamwork</span></div>
+          <div class="tcc"><i class="fas fa-comments"></i><span>Communication</span></div>
+          <div class="tcc"><i class="fas fa-paint-brush"></i><span>Creativity</span></div>
+          <div class="tcc"><i class="fas fa-chess-king"></i><span>Leadership</span></div>
+          <div class="tcc"><i class="fas fa-clock"></i><span>Time Management</span></div>
+          <div class="tcc"><i class="fas fa-sync-alt"></i><span>Adaptability</span></div>
+          <div class="tcc"><i class="fas fa-search"></i><span>Attention to Detail</span></div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 <div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     PROJECTS  (UPDATE 6)
+════════════════════════════════════ -->
 <section id="projects" style="background:var(--bg2)">
   <div class="sw">
-    <div class="rv" style="text-align:center;margin-bottom:40px"><div class="sl" style="justify-content:center">Portfolio</div><h2 class="st">Latest Projects</h2><p class="sd" style="margin:0 auto;text-align:center;margin-bottom:30px">A selection of my recent work across mobile, web, and AI-powered applications.</p></div>
+    <div class="rv" style="text-align:center;margin-bottom:40px">
+      <div class="sl" style="justify-content:center">Portfolio</div>
+      <h2 class="st">Latest Projects</h2>
+      <p class="sd" style="margin:0 auto;text-align:center;margin-bottom:30px">Real-world apps and systems I've designed, built, and shipped.</p>
+    </div>
     <div class="pfl rv">
-      <button class="fb act" data-f="all">All</button><button class="fb" data-f="flutter">Flutter</button>
-      <button class="fb" data-f="ml">ML / AI</button><button class="fb" data-f="web">Web</button>
+      <button class="fb act" data-f="all">All</button>
+      <button class="fb" data-f="flutter">Flutter</button>
+      <button class="fb" data-f="ml">ML / AI</button>
+      <button class="fb" data-f="web">Web</button>
     </div>
     <div class="pg" id="pg">
-      <div class="pc rv" data-cat="flutter ml" data-title="AI-Powered Mobile App" data-tag="Flutter · ML" data-img="image/ml.jpg" data-desc="Flutter mobile app with ML: email spam detection, automatic reply suggestions, content summarization, and hate speech filtering." data-techs="Flutter,Dart,Python,TensorFlow,Firebase"><div class="piw"><img class="pim" src="image/ml.jpg" alt="AI"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>AI-Powered Mobile App</h3><p>Flutter app with ML: spam detection, auto reply, summarization, and hate speech filtering.</p></div></div>
-      <div class="pc rv" data-cat="web" data-title="Real Estate Application" data-tag="PHP · MySQL" data-img="image/realestateimg.png" data-desc="PHP-based platform for managing property listings with admin controls and user exploration. Black-themed, responsive UI." data-techs="PHP,MySQL,HTML,CSS,JavaScript"><div class="piw"><img class="pim" src="image/realestateimg.png" alt="Real Estate"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">PHP · MySQL</span><h3>Real Estate Application</h3><p>Platform for property listings, admin controls, and responsive UI.</p></div></div>
-      <div class="pc rv" data-cat="flutter" data-title="YoHire - Job Finder App" data-tag="Flutter" data-img="image/yohire.png" data-desc="Flutter app connecting job seekers with employers. User authentication, job listings, application tracking, and real-time notifications." data-techs="Flutter,Dart,Firebase,REST API"><div class="piw"><img class="pim" src="image/yohire.png" alt="YoHire"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter</span><h3>YoHire - Job Finder App</h3><p>Connects job seekers with employers. Auth, listings, tracking, notifications.</p></div></div>
-      <div class="pc rv" data-cat="flutter" data-title="FitSea - Fitness App" data-tag="Flutter" data-img="image/fitsea.jpg" data-desc="Flutter app for fitness and wellness. Workout tracking, personalized plans, progress analytics, and ML recommendations." data-techs="Flutter,Dart,Firebase,Charts"><div class="piw"><img class="pim" src="image/fitsea.jpg" alt="FitSea"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter</span><h3>FitSea - Fitness &amp; Wellness</h3><p>Workout tracking, personalized plans, progress analytics, and recommendations.</p></div></div>
-      <div class="pc rv" data-cat="ml" data-title="Cyberbullying Detection" data-tag="Python · NLP · ML" data-img="image/cyberbullyingimg.jpg" data-desc="Final year project detecting cyberbullying in low-resource languages using NLP and ML. Analyzes social media and flags harmful content." data-techs="Python,NLP,scikit-learn,Transformers,Flask"><div class="piw"><img class="pim" src="image/cyberbullyingimg.jpg" alt="Cyberbullying"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Python · NLP · ML</span><h3>Cyberbullying Detection</h3><p>Detects cyberbullying in low-resource languages using NLP and flags harmful content.</p></div></div>
-      <div class="pc rv" data-cat="flutter ml" data-title="Email Automation App" data-tag="Flutter · ML" data-img="image/emailimg.png" data-desc="Flutter app with ML-based email automation: smart replies, spam filtering, and automatic sorting for better productivity." data-techs="Flutter,Dart,Python,ML Models,REST API"><div class="piw"><img class="pim" src="image/emailimg.png" alt="Email"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Email Automation App</h3><p>ML-based email automation: smart replies, spam filtering, and auto sorting.</p></div></div>
-      <div class="pc rv" data-cat="flutter ml" data-title="Content Summarizer App" data-tag="Flutter · ML" data-img="image/summarizer.jpg" data-desc="Flutter app leveraging ML to automatically summarize text content for improved reading efficiency and workflow." data-techs="Flutter,Dart,NLP,REST API,Python"><div class="piw"><img class="pim" src="image/summarizer.jpg" alt="Summarizer"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Content Summarizer App</h3><p>ML-powered text summarization for improved reading efficiency.</p></div></div>
-      <div class="pc rv" data-cat="flutter ml" data-title="Hate Speech Detection App" data-tag="Flutter · ML" data-img="image/hate.jpg" data-desc="Cross-platform app detecting hate speech in messages using ML models. Built with Flutter for Android and iOS." data-techs="Flutter,Dart,TensorFlow,Python,Firebase"><div class="piw"><img class="pim" src="image/hate.jpg" alt="Hate Speech"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div><div class="pb2"><span class="ptg">Flutter · ML</span><h3>Hate Speech Detection App</h3><p>Detects hate speech using ML. Built with Flutter for cross-platform use.</p></div></div>
+
+      <!-- P1 -->
+      <div class="pc rv"
+        data-cat="flutter ml"
+        data-title="Smart Email App — AI Features Suite"
+        data-tag="Flutter · ML · Firebase"
+        data-img="image/ml.jpg"
+        data-desc="A Flutter mobile app embedding four ML capabilities: intelligent spam email detection, context-aware smart reply suggestions, automatic text summarisation for long emails, and real-time hate speech filtering. Python Flask ML backend with Firebase for auth and cloud storage. Deployed on Android."
+        data-techs="Flutter,Dart,Python,Flask,TensorFlow,Firebase,REST API">
+        <div class="piw"><img class="pim" src="image/ml.jpg" alt="Smart Email"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · ML · Firebase</span><h3>Smart Email App — AI Suite</h3><p>4 ML features in one app: spam detection, smart replies, summarisation &amp; hate speech filtering.</p></div>
+      </div>
+
+      <!-- P2 -->
+      <div class="pc rv"
+        data-cat="flutter"
+        data-title="YoHire — Job Finder App"
+        data-tag="Flutter · Firebase · REST API"
+        data-img="image/yohire.png"
+        data-desc="A cross-platform Flutter job finder app connecting job seekers with employers. Features include user &amp; employer authentication, profile creation, job listing browsing with filters, one-tap job applications, application status tracking, and real-time push notifications via Firebase Cloud Messaging."
+        data-techs="Flutter,Dart,Firebase,FCM,REST API,Provider">
+        <div class="piw"><img class="pim" src="image/yohire.png" alt="YoHire"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · Firebase</span><h3>YoHire — Job Finder App</h3><p>Connects job seekers &amp; employers with real-time notifications and application tracking.</p></div>
+      </div>
+
+      <!-- P3 -->
+      <div class="pc rv"
+        data-cat="flutter"
+        data-title="FitSea — Fitness &amp; Wellness App"
+        data-tag="Flutter · Firebase · Charts"
+        data-img="image/fitsea.jpg"
+        data-desc="A Flutter health and fitness app offering personalised workout plans, daily exercise tracking, interactive progress charts, BMI calculation, hydration reminders, and ML-powered content recommendations tailored to the user's goals. Supports beginner through to advanced fitness programmes."
+        data-techs="Flutter,Dart,Firebase,fl_chart,Provider,ML Recommendations">
+        <div class="piw"><img class="pim" src="image/fitsea.jpg" alt="FitSea"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · Firebase</span><h3>FitSea — Fitness &amp; Wellness</h3><p>Personalised workout tracking, progress analytics, hydration reminders &amp; smart recommendations.</p></div>
+      </div>
+
+      <!-- P4 -->
+      <div class="pc rv"
+        data-cat="ml"
+        data-title="Cyberbullying Detection — NLP Research"
+        data-tag="Python · NLP · Deep Learning"
+        data-img="image/cyberbullyingimg.jpg"
+        data-desc="M.Sc. final year research: detecting cyberbullying in Malayalam (a low-resource language) social media comments using transformer-based NLP models (mBERT, IndicBERT) and classical classifiers. Built a custom-labelled dataset, implemented preprocessing pipelines, trained and evaluated multiple models, and deployed a Flask prediction API."
+        data-techs="Python,mBERT,IndicBERT,scikit-learn,NLTK,Flask,Pandas,NumPy">
+        <div class="piw"><img class="pim" src="image/cyberbullyingimg.jpg" alt="Cyberbullying"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Python · NLP · Research</span><h3>Cyberbullying Detection System</h3><p>NLP research: detects cyberbullying in Malayalam using mBERT &amp; IndicBERT models.</p></div>
+      </div>
+
+      <!-- P5 -->
+      <div class="pc rv"
+        data-cat="web"
+        data-title="Real Estate Management Platform"
+        data-tag="PHP · MySQL · JavaScript"
+        data-img="image/realestateimg.png"
+        data-desc="A full-featured PHP/MySQL web platform for real estate property management. Includes admin dashboard for listing management, agent profiles, advanced property search with filters (location, price, type, bedrooms), inquiry forms, and a responsive frontend built with HTML/CSS/JS. Supports both buyers and sellers."
+        data-techs="PHP,MySQL,HTML5,CSS3,JavaScript,Bootstrap,AJAX">
+        <div class="piw"><img class="pim" src="image/realestateimg.png" alt="Real Estate"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">PHP · MySQL · Web</span><h3>Real Estate Platform</h3><p>Full-featured property listings with admin dashboard, advanced search filters &amp; agent profiles.</p></div>
+      </div>
+
+      <!-- P6 -->
+      <div class="pc rv"
+        data-cat="flutter ml"
+        data-title="Content Summariser App"
+        data-tag="Flutter · NLP · Python"
+        data-img="image/summarizer.jpg"
+        data-desc="A Flutter productivity app that uses NLP-based extractive and abstractive summarisation to condense long articles, documents, and web content into concise summaries. Users can paste text or share URLs directly. The Python backend leverages transformer models for abstractive summarisation, helping users manage information overload efficiently."
+        data-techs="Flutter,Dart,Python,Transformers,Flask,REST API">
+        <div class="piw"><img class="pim" src="image/summarizer.jpg" alt="Summariser"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · NLP</span><h3>Content Summariser App</h3><p>Condenses articles &amp; documents into concise summaries instantly using transformer NLP.</p></div>
+      </div>
+
+      <!-- P7 -->
+      <div class="pc rv"
+        data-cat="flutter ml"
+        data-title="Hate Speech Detection App"
+        data-tag="Flutter · TFLite · On-device ML"
+        data-img="image/hate.jpg"
+        data-desc="A cross-platform Flutter app that analyses text messages and social media content for hate speech and offensive language in real time. Uses a TensorFlow Lite model embedded directly in the app for on-device inference — no internet required. Provides a confidence score, flagging category, and constructive alternative suggestions."
+        data-techs="Flutter,Dart,TensorFlow Lite,Python,Firebase,On-device ML">
+        <div class="piw"><img class="pim" src="image/hate.jpg" alt="Hate Speech"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · TFLite</span><h3>Hate Speech Detection App</h3><p>On-device TFLite ML for real-time hate speech detection — works fully offline.</p></div>
+      </div>
+
+      <!-- P8 -->
+      <div class="pc rv"
+        data-cat="flutter ml"
+        data-title="Email Spam &amp; Auto Reply App"
+        data-tag="Flutter · ML · Python"
+        data-img="image/emailimg.png"
+        data-desc="A Flutter email client with ML-driven spam filtering and context-aware auto-reply generation. The spam classifier uses a fine-tuned Naive Bayes model with TF-IDF features achieving 97% accuracy. The reply generator uses a sequence-to-sequence transformer model to produce relevant, natural-sounding reply drafts based on email content."
+        data-techs="Flutter,Dart,Python,Naive Bayes,TF-IDF,Seq2Seq,Flask,Firebase">
+        <div class="piw"><img class="pim" src="image/emailimg.png" alt="Email"/><div class="pov"><div class="ob" onclick="oM(this.closest('.pc'))"><i class="fas fa-expand-alt"></i></div></div></div>
+        <div class="pb2"><span class="ptg">Flutter · ML</span><h3>Email Spam &amp; Auto Reply</h3><p>97% accuracy spam filter + transformer-based context-aware auto reply generation.</p></div>
+      </div>
+
     </div>
   </div>
 </section>
 <div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════ -->
+<section id="certifications">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:60px">
+      <div class="sl">Credentials</div>
+      <h2 class="st">Certifications</h2>
+      <p class="sd">Professional certifications and courses that validate my technical expertise.</p>
+    </div>
+    <div class="cert-grid">
+
+      <!-- CERT 1 — AI For Everyone -->
+      <div class="ccard rv"
+        data-img="image/AI.png"
+        data-title="AI For Everyone"
+        data-issuer="DeepLearning.AI via Coursera"
+        data-date="Oct 2025"
+        data-badge="DeepLearning.AI"
+        data-badge-class="blue"
+        data-desc="A non-technical course by Andrew Ng designed to help everyone understand AI technologies and their real-world business applications. Covers what AI can and cannot do, how to spot opportunities to apply AI, how to navigate AI projects, and the societal impact of artificial intelligence."
+        data-skills="AI Literacy,AI Strategy,Machine Learning Concepts,AI Ethics,Business Applications,AI Project Management"
+        data-verify="#"
+        onclick="openCert(this)">
+        <div class="ccard-top">
+          <div class="cicon" style="color:#54c5f8;border-color:rgba(84,197,248,.25);background:rgba(84,197,248,.08)"><i class="fas fa-robot"></i></div>
+          <span class="cbadge blue">DeepLearning.AI</span>
+        </div>
+        <div class="cname">AI For Everyone</div>
+        <div class="cissuer"><i class="fas fa-building" style="font-size:.7rem"></i> DeepLearning.AI via Coursera</div>
+        <div class="cdate"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Oct 2025</div>
+        <div class="covl"><div class="covl-btn"><i class="fas fa-expand-alt"></i></div></div>
+      </div>
+
+      <!-- CERT 2 — Data Science for Engineers -->
+      <div class="ccard rv"
+        data-img="image/DS.png"
+        data-title="Data Science for Engineers"
+        data-issuer="NPTEL"
+        data-date="Sep 2025"
+        data-badge="NPTEL"
+        data-badge-class="purple"
+        data-desc="A rigorous NPTEL course covering the full data science pipeline for engineering applications — including statistical foundations, data wrangling, exploratory data analysis, machine learning algorithms, model evaluation, and real-world case studies using Python and relevant data science libraries."
+        data-skills="Data Science,Statistical Analysis,Machine Learning,Exploratory Data Analysis,R,Python,Pandas,NumPy,Model Evaluation"
+        data-verify="#"
+        onclick="openCert(this)">
+        <div class="ccard-top">
+          <div class="cicon" style="color:#a78bfa;border-color:rgba(124,58,237,.25);background:rgba(124,58,237,.1)"><i class="fas fa-brain"></i></div>
+          <span class="cbadge purple">NPTEL</span>
+        </div>
+        <div class="cname">Data Science for Engineers</div>
+        <div class="cissuer"><i class="fas fa-building" style="font-size:.7rem"></i> NPTEL</div>
+        <div class="cdate"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Sep 2025</div>
+        <div class="covl"><div class="covl-btn"><i class="fas fa-expand-alt"></i></div></div>
+      </div>
+
+      <!-- CERT 3 — MicroPython for Beginners -->
+      <div class="ccard rv"
+        data-img="image/micropy.png"
+        data-title="MicroPython for Beginners"
+        data-issuer="National Institute of Electronics &amp; Information Technology (NIELIT)"
+        data-date="Nov 2024"
+        data-badge="NIELIT"
+        data-badge-class="blue"
+        data-desc="An introductory course by NIELIT covering MicroPython programming for embedded systems and IoT devices. Topics include MicroPython syntax, GPIO control, sensor interfacing, communication protocols, and deploying scripts on microcontroller boards such as ESP32 and Raspberry Pi Pico."
+        data-skills="MicroPython,Python,IoT,Embedded Systems,GPIO,ESP32,Raspberry Pi Pico,Sensor Interfacing"
+        data-verify="#"
+        onclick="openCert(this)">
+        <div class="ccard-top">
+          <div class="cicon" style="color:#54c5f8;border-color:rgba(84,197,248,.25);background:rgba(84,197,248,.08)"><i class="fab fa-python"></i></div>
+          <span class="cbadge blue">NIELIT</span>
+        </div>
+        <div class="cname">MicroPython for Beginners</div>
+        <div class="cissuer"><i class="fas fa-building" style="font-size:.7rem"></i> NIELIT</div>
+        <div class="cdate"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Nov 2024</div>
+        <div class="covl"><div class="covl-btn"><i class="fas fa-expand-alt"></i></div></div>
+      </div>
+
+      <!-- CERT 4 — Introduction to Programming Using Python -->
+      <div class="ccard rv"
+        data-img="image/python.png"
+        data-title="Introduction to Programming Using Python"
+        data-issuer="Scaler"
+        data-date="Oct 2024"
+        data-badge="Scaler"
+        data-badge-class="orange"
+        data-desc="A beginner-friendly Python programming course by Scaler covering core programming concepts including variables, data types, control flow, loops, functions, object-oriented programming basics, file handling, and an introduction to Python's standard library — providing a solid foundation for further development."
+        data-skills="Python,Variables &amp; Data Types,Control Flow,Loops,Functions,OOP Basics,File Handling,Standard Library"
+        data-verify="#"
+        onclick="openCert(this)">
+        <div class="ccard-top">
+          <div class="cicon" style="color:#fb923c;border-color:rgba(251,146,60,.25);background:rgba(251,146,60,.08)"><i class="fab fa-python"></i></div>
+          <span class="cbadge orange">Scaler</span>
+        </div>
+        <div class="cname">Introduction to Programming Using Python</div>
+        <div class="cissuer"><i class="fas fa-building" style="font-size:.7rem"></i> Scaler</div>
+        <div class="cdate"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Oct 2024</div>
+        <div class="covl"><div class="covl-btn"><i class="fas fa-expand-alt"></i></div></div>
+      </div>
+
+      <!-- CERT 5 — Introduction to Programming Using HTML and CSS -->
+      <div class="ccard rv"
+        data-img="image/html.png"
+        data-title="Introduction to Programming Using HTML and CSS"
+        data-issuer="Scaler"
+        data-date="Sep 2024"
+        data-badge="Scaler"
+        data-badge-class="purple"
+        data-desc="A foundational web development course by Scaler covering HTML5 structure (semantic elements, forms, tables, media) and CSS3 styling (selectors, box model, Flexbox, responsive design, animations). Provides hands-on experience building real web pages from scratch and understanding how browsers render content."
+        data-skills="HTML5,CSS3,Semantic HTML,Flexbox,Responsive Design,CSS Animations,Forms,Box Model"
+        data-verify="#"
+        onclick="openCert(this)">
+        <div class="ccard-top">
+          <div class="cicon" style="color:#a78bfa;border-color:rgba(124,58,237,.25);background:rgba(124,58,237,.1)"><i class="fab fa-html5"></i></div>
+          <span class="cbadge purple">Scaler</span>
+        </div>
+        <div class="cname">Introduction to Programming Using HTML and CSS</div>
+        <div class="cissuer"><i class="fas fa-building" style="font-size:.7rem"></i> Scaler</div>
+        <div class="cdate"><i class="fas fa-calendar-alt" style="font-size:.7rem"></i> Sep 2024</div>
+        <div class="covl"><div class="covl-btn"><i class="fas fa-expand-alt"></i></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="div"></div>
+
+<!-- ═══════════════════════════════════
+     CONTACT
+════════════════════════════════════ -->
 <section id="contact">
   <div class="sw">
-    <div class="rv" style="margin-bottom:60px"><div class="sl">Get In Touch</div><h2 class="st">Let's Work Together</h2><p class="sd">Have a project in mind? I'm available for freelance and full-time opportunities. Every message goes directly to my inbox.</p></div>
+    <div class="rv" style="margin-bottom:60px">
+      <div class="sl">Get In Touch</div>
+      <h2 class="st">Let's Work Together</h2>
+      <p class="sd">Have a project in mind? I'm open to freelance and full-time opportunities. Every message goes directly to my inbox.</p>
+    </div>
     <div class="ci">
       <div class="cih rvl">
         <h3>Contact Information</h3>
@@ -435,60 +868,70 @@ footer p{color:var(--muted);font-size:.82rem}
           <div class="cit"><div class="cion"><i class="fas fa-clock"></i></div><div class="ctx"><span>Response Time</span><p>Usually within 24 hours</p></div></div>
         </div>
         <div class="socl">
-          <a href="https://github.com/adilaslamkv" class="sol" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/adilaslamkv/" class="sol" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/aadil_kv/?hl=en" class="sol" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://web.whatsapp.com/" class="sol" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
-
+          <a href="https://github.com/adilaslamkv"           class="sol" title="GitHub"    target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/adilaslamkv/" class="sol" title="LinkedIn"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/aadil_kv/?hl=en" class="sol" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://web.whatsapp.com/"                 class="sol" title="WhatsApp"  target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="rvr">
-       
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-        <form class="cf" 
-action="https://docs.google.com/forms/d/e/1FAIpQLSdZiBe6qn4tKr4poI_xeG-SzqfXp38h-KESHYe8aKOAuMC9Cg/formResponse" 
-  method="POST"
-target="hidden_iframe"
-onsubmit="submitted=true;">
-<input type="hidden" name="fvv" value="1">
-<input type="hidden" name="fbzx" value="1234567890">
-<input type="hidden" name="pageHistory" value="0">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <form class="cf" id="cForm"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSdZiBe6qn4tKr4poI_xeG-SzqfXp38h-KESHYe8aKOAuMC9Cg/formResponse"
+          method="POST" target="hidden_iframe" onsubmit="formSubmit()">
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="fbzx" value="1234567890">
+          <input type="hidden" name="pageHistory" value="0">
           <div class="frow">
             <div class="fg"><label for="fn">First Name *</label><input type="text" id="fn" name="entry.807600390" placeholder="John" required/></div>
             <div class="fg"><label for="ln">Last Name *</label><input type="text" id="ln" name="entry.1252414643" placeholder="Doe"/></div>
           </div>
           <div class="fg"><label for="em">Email Address *</label><input type="email" id="em" name="entry.1936528767" placeholder="john@example.com" required/></div>
- <div class="fg"><label for="su">Phone Number *</label><input type="text" id="su" name="entry.1692214077" placeholder="9876543210" required/></div>
+          <div class="fg"><label for="ph">Phone Number</label><input type="text" id="ph" name="entry.1692214077" placeholder="9876543210"/></div>
           <div class="fg"><label for="su">Subject *</label><input type="text" id="su" name="entry.2118053347" placeholder="Project Inquiry" required/></div>
           <div class="fg" style="position:relative">
             <label for="ms">Message * <small style="font-size:.7rem;color:var(--muted);text-transform:none;letter-spacing:0">(min 20 chars)</small></label>
             <textarea id="ms" name="entry.1651721601" placeholder="Tell me about your project, timeline, budget..." required maxlength="2000"></textarea>
             <span class="cc" id="cc">0 / 2000</span>
           </div>
-<button type="submit" class="btp mb" id="sb">Send Message</button>
-         
+          <button type="submit" class="btp mb" id="sb"><i class="fas fa-paper-plane" id="bi"></i>&nbsp;<span id="bt">Send Message</span></button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 <footer>
   <p>© 2026 <strong style="color:var(--text)">ADIL ASLAM K V</strong>. All rights reserved.</p>
   <a href="#home" class="bkt">Back to top <i class="fas fa-arrow-up"></i></a>
 </footer>
-<script>
-var submitted = false;
 
-document.getElementById("hidden_iframe").onload = function () {
-    if (submitted) {
-        alert("✅ Message sent successfully!");
-        document.getElementById("cForm").reset();
-        submitted = false;
-    }
+<script>
+/* ── FORM SUBMIT ── */
+var formSubmitted = false;
+function formSubmit(){
+  formSubmitted = true;
+  const btn=document.getElementById('sb'),bi=document.getElementById('bi'),bt=document.getElementById('bt');
+  btn.disabled=true;
+  bi.className='fas fa-spinner fa-spin'; bt.textContent=' Sending…';
+}
+document.getElementById('hidden_iframe').onload = function(){
+  if(formSubmitted){
+    document.getElementById('bi').className='fas fa-check';
+    document.getElementById('bt').textContent=' Sent!';
+    showToast("Message sent! I'll reply within 24 hours.",'ok');
+    setTimeout(()=>{
+      document.getElementById('sb').disabled=false;
+      document.getElementById('bi').className='fas fa-paper-plane';
+      document.getElementById('bt').textContent='Send Message';
+      document.getElementById('cForm').reset();
+      document.getElementById('cc').textContent='0 / 2000';
+    },3500);
+    formSubmitted=false;
+  }
 };
 
-/* 1. PARTICLES */
+/* ── 1. PARTICLES ── */
 (function(){
   const cv=document.getElementById('pCanvas'),ctx=cv.getContext('2d');
   let W,H,pts=[],mx=null,my=null;
@@ -506,7 +949,7 @@ document.getElementById("hidden_iframe").onload = function () {
   (function loop(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{p.tick();p.draw()});connect();requestAnimationFrame(loop)})();
 })();
 
-/* 2. CURSOR */
+/* ── 2. CURSOR ── */
 const cD=document.getElementById('cDot'),cR=document.getElementById('cRing');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cD.style.left=mx+'px';cD.style.top=my+'px'});
@@ -514,76 +957,160 @@ document.addEventListener('mousedown',()=>{cD.classList.add('ck');cR.classList.a
 document.addEventListener('mouseup',()=>{cD.classList.remove('ck');cR.classList.remove('ck')});
 (function tickC(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cR.style.left=rx+'px';cR.style.top=ry+'px';requestAnimationFrame(tickC)})();
 function ah(sel,c='hv'){document.querySelectorAll(sel).forEach(el=>{el.addEventListener('mouseenter',()=>{cD.classList.add(c);cR.classList.add(c)});el.addEventListener('mouseleave',()=>{cD.classList.remove(c);cR.classList.remove(c)})})}
-ah('a,button,.sc2,.pc,.tcc,.tg,.fb,.sol,.ob,.mc,.bkt,.hbg,.ec,.cit');
+ah('a,button,.sc2,.pc,.tcc,.tg,.fb,.sol,.ob,.mc,.bkt,.hbg,.ec,.cit,.ccard');
 ah('input,textarea','tx');
 
-/* 3. SCROLL PROGRESS + NAV */
+/* ── 3. SCROLL PROGRESS + NAV ── */
 window.addEventListener('scroll',()=>{
   const p=scrollY/(document.documentElement.scrollHeight-innerHeight)*100;
   document.getElementById('pb').style.width=p+'%';
   document.getElementById('nav').classList.toggle('sc',scrollY>60);
-  document.querySelectorAll('section[id]').forEach(s=>{const t=s.offsetTop-100,b=t+s.offsetHeight;if(scrollY>=t&&scrollY<b)document.querySelectorAll('.navl a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+s.id))});
+  document.querySelectorAll('section[id]').forEach(s=>{
+    const t=s.offsetTop-100,b=t+s.offsetHeight;
+    if(scrollY>=t&&scrollY<b)
+      document.querySelectorAll('.navl a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+s.id));
+  });
 });
 
-/* 4. MOBILE MENU */
+/* ── 4. MOBILE MENU ── */
 function tM(){const m=document.getElementById('mm'),h=document.getElementById('hbg');m.classList.toggle('op');h.classList.toggle('op')}
 function cM(){document.getElementById('mm').classList.remove('op');document.getElementById('hbg').classList.remove('op')}
 
-/* 5. TYPED TEXT */
+/* ── 5. TYPED TEXT ── */
 const phs=['Flutter Developer','Mobile App Developer','AI/ML Enthusiast','Full Stack Developer','UI/UX Designer'];
 let pi=0,ci=0,dl=false;
 const tEl=document.getElementById('tEl');
 function type(){const p=phs[pi];if(!dl){tEl.textContent=p.slice(0,++ci);if(ci===p.length){dl=true;setTimeout(type,2000);return}}else{tEl.textContent=p.slice(0,--ci);if(ci===0){dl=false;pi=(pi+1)%phs.length}}setTimeout(type,dl?52:80)}
 type();
 
-/* 6. SCROLL REVEAL */
+/* ── 6. SCROLL REVEAL ── */
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const d=parseFloat(e.target.dataset.d)||0;setTimeout(()=>e.target.classList.add('vi'),d)}})},{threshold:.1});
 document.querySelectorAll('.rv,.rvl,.rvr').forEach((el,i)=>{el.dataset.d=Math.min(i%6*65,340);ro.observe(el)});
 
-/* 7. COUNTERS */
+/* ── 7. COUNTERS ── */
 const co=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.t,dur=1500;let s=null;const step=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/dur,1),ez=1-Math.pow(1-p,3);e.target.textContent=Math.round(ez*t);if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);co.unobserve(e.target)}})},{threshold:.5});
 document.querySelectorAll('.ctr').forEach(el=>co.observe(el));
 
-/* 8. SKILL BARS */
-const sbo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sbf').forEach((b,i)=>setTimeout(()=>{b.style.width=b.dataset.w+'%'},i*150));sbo.unobserve(e.target)}})},{threshold:.3});
-document.querySelectorAll('#sbw').forEach(el=>sbo.observe(el));
+/* ── 8. SPOTLIGHT on cards ── */
+document.querySelectorAll('.sc2,.ec,.ccard').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')})});
 
-/* 9. SPOTLIGHT on cards */
-document.querySelectorAll('.sc2,.ec').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')})});
-
-/* 10. 3D TILT HERO */
+/* ── 9. 3D TILT HERO ── */
 const hCard=document.getElementById('hCard');
 if(hCard){hCard.parentElement.addEventListener('mousemove',e=>{const r=hCard.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;hCard.style.transform=`perspective(760px) rotateX(${((e.clientY-cy)/r.height)*16}deg) rotateY(${((e.clientX-cx)/r.width)*-16}deg) scale(1.04)`});hCard.parentElement.addEventListener('mouseleave',()=>{hCard.style.transform='perspective(760px) rotateX(0) rotateY(0) scale(1)'})}
 
-/* 11. RIPPLE */
+/* ── 10. RIPPLE ── */
 document.querySelectorAll('.btp,.bto').forEach(b=>{b.addEventListener('click',e=>{const r=b.getBoundingClientRect(),rp=document.createElement('span'),sz=Math.max(r.width,r.height)*2;rp.className='rpl';rp.style.cssText=`width:${sz}px;height:${sz}px;left:${e.clientX-r.left-sz/2}px;top:${e.clientY-r.top-sz/2}px`;b.appendChild(rp);setTimeout(()=>rp.remove(),630)})});
 
-/* 12. MAGNETIC BUTTONS */
+/* ── 11. MAGNETIC BUTTONS ── */
 document.querySelectorAll('.mb').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.3}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>{b.style.transform='translate(0,0)'})});
 
-/* 13. PROJECT FILTER */
+/* ── 12. PROJECT FILTER ── */
 document.querySelectorAll('.fb').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));btn.classList.add('act');const f=btn.dataset.f;document.querySelectorAll('.pc').forEach(c=>{const show=f==='all'||(c.dataset.cat||'').includes(f);if(show){c.classList.remove('hd');c.style.animation='none';requestAnimationFrame(()=>{c.style.animation='pi .38s forwards'})}else{c.style.opacity='0';c.style.transform='scale(.93)';setTimeout(()=>c.classList.add('hd'),310)}})})});
 
-/* 14. PROJECT MODAL */
+/* ── 13. PROJECT MODAL ── */
 function oM(card){document.getElementById('mImg').src=card.dataset.img||'';document.getElementById('mTag').textContent=card.dataset.tag||'';document.getElementById('mTtl').textContent=card.dataset.title||'';document.getElementById('mDsc').textContent=card.dataset.desc||'';document.getElementById('mTcs').innerHTML=(card.dataset.techs||'').split(',').map(t=>`<span class="mtech">${t.trim()}</span>`).join('');document.getElementById('pModal').classList.add('op');document.body.style.overflow='hidden'}
 document.getElementById('mCls').addEventListener('click',cMod);
 document.getElementById('pModal').addEventListener('click',e=>{if(e.target===document.getElementById('pModal'))cMod()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cMod()});
 function cMod(){document.getElementById('pModal').classList.remove('op');document.body.style.overflow=''}
 
-/* 15. CHAR COUNTER */
+/* ── 14. CHAR COUNTER ── */
 const msEl=document.getElementById('ms'),ccEl=document.getElementById('cc');
 msEl.addEventListener('input',()=>{const n=msEl.value.length;ccEl.textContent=`${n} / 2000`;ccEl.className='cc'+(n>1800?' wn':'')+(n>=2000?' ov':'')});
 
-/* 16. TOAST */
+/* ── 15. TOAST ── */
 let tTimer;
 function showToast(msg,type='inf'){const t=document.getElementById('toast');t.className=`toast ${type}`;const icons={ok:'fa-check-circle',err:'fa-exclamation-circle',inf:'fa-info-circle'};t.innerHTML=`<i class="fas ${icons[type]}"></i> ${msg}`;t.classList.add('show');clearTimeout(tTimer);tTimer=setTimeout(()=>t.classList.remove('show'),4500)}
 
-
-/* 18. INPUT LABEL ANIMATION */
+/* ── 16. INPUT LABEL ANIMATION ── */
 document.querySelectorAll('.fg input,.fg textarea').forEach(inp=>{inp.addEventListener('focus',()=>{const l=inp.parentElement.querySelector('label');if(l)l.style.color='var(--accent)'});inp.addEventListener('blur',()=>{const l=inp.parentElement.querySelector('label');if(l)l.style.color=''})});
+
+/* ── 17. CERT MODAL ── */
+const badgeColorMap = {
+  blue:   {border:'rgba(0,212,255,.2)',   bg:'rgba(0,212,255,.08)',   color:'var(--accent)'},
+  purple: {border:'rgba(124,58,237,.25)', bg:'rgba(124,58,237,.1)',   color:'#a78bfa'},
+  green:  {border:'rgba(16,185,129,.25)', bg:'rgba(16,185,129,.1)',   color:'var(--accent3)'},
+  orange: {border:'rgba(251,146,60,.25)', bg:'rgba(251,146,60,.08)',  color:'#fb923c'},
+};
+
+function openCert(card){
+  const img     = card.dataset.img     || '';
+  const title   = card.dataset.title   || '';
+  const issuer  = card.dataset.issuer  || '';
+  const date    = card.dataset.date    || '';
+  const badge   = card.dataset.badge   || '';
+  const bClass  = card.dataset.badgeClass || 'blue';
+  const desc    = card.dataset.desc    || '';
+  const skills  = card.dataset.skills  || '';
+  const verify  = card.dataset.verify  || '#';
+
+  /* Image / placeholder */
+  const wrap = document.getElementById('certImgWrap');
+  if(img){
+    wrap.innerHTML = `<img class="cmimg" src="${img}" alt="${title}" onerror="this.parentElement.innerHTML=buildPlaceholder('${bClass}')"/>`;
+  } else {
+    wrap.innerHTML = buildPlaceholder(bClass);
+  }
+
+  /* Top badge row */
+  const bc = badgeColorMap[bClass] || badgeColorMap.blue;
+  document.getElementById('certTopRow').innerHTML =
+    `<span class="cbadge ${bClass}">${badge}</span>`;
+
+  /* Title */
+  document.getElementById('certTitle').textContent = title;
+
+  /* Meta: issuer + date */
+  document.getElementById('certMeta').innerHTML =
+    `<div class="cm-meta-item"><i class="fas fa-building"></i>${issuer}</div>
+     <div class="cm-meta-item"><i class="fas fa-calendar-alt"></i>${date}</div>`;
+
+  /* Description */
+  document.getElementById('certDesc').textContent = desc;
+
+  /* Skills */
+  const skillsHtml = skills.split(',').map(s=>`<span class="cm-skill">${s.trim()}</span>`).join('');
+  document.getElementById('certSkills').innerHTML = skillsHtml;
+
+  /* Verify link */
+  const vLink = document.getElementById('certVerify');
+  if(verify && verify !== '#'){
+    vLink.href = verify;
+    vLink.style.display = 'inline-flex';
+  } else {
+    vLink.href = '#';
+    vLink.style.display = 'none'; // hide if no real link
+  }
+
+  /* Open */
+  document.getElementById('certModal').classList.add('op');
+  document.body.style.overflow = 'hidden';
+}
+
+function buildPlaceholder(bClass){
+  const iconMap = {blue:'fa-certificate',purple:'fa-robot',green:'fa-graduation-cap',orange:'fa-fire'};
+  const icon = iconMap[bClass] || 'fa-certificate';
+  return `<div class="cmimg-placeholder">
+    <i class="fas ${icon} bigico" style="color:var(--accent);opacity:.35;font-size:4rem"></i>
+    <span>Certificate Image</span>
+    <small style="color:var(--muted);font-size:.72rem">Add your image path to data-img</small>
+  </div>`;
+}
+
+function closeCert(){
+  document.getElementById('certModal').classList.remove('op');
+  document.body.style.overflow='';
+}
+
+document.getElementById('certClose').addEventListener('click', closeCert);
+document.getElementById('certModal').addEventListener('click', e=>{
+  if(e.target === document.getElementById('certModal')) closeCert();
+});
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeCert();
+});
+/* Prevent modal inner click from bubbling to backdrop */
+document.querySelector('.cmb').addEventListener('click', e=>e.stopPropagation());
 </script>
 </body>
 </html>
-
-
